@@ -129,6 +129,253 @@ section{padding:64px 0;position:relative}
 .pillar h3{margin:0;font-size:19px}
 .pillar p{margin:0;font-size:15.5px;color:var(--ink-2)}
 
+/* ============================================================
+   BÔNUS — cards de presente
+   ============================================================ */
+.bonus{
+  background:
+    radial-gradient(800px 500px at 50% 0%,rgba(201,162,74,.10),transparent 60%),
+    var(--bg-2);
+  position:relative;
+}
+.bonus .section-head .strong{color:var(--amber-d);font-style:italic}
+.bonus .section-head h2 em{color:var(--sage-dd);font-style:italic}
+.bonus-grid{
+  display:grid;
+  gap:80px 24px;
+  grid-template-columns:1fr;
+  margin-top:64px;
+}
+@media(min-width:768px){.bonus-grid{grid-template-columns:repeat(3,1fr);gap:90px 28px;margin-top:80px}}
+
+.bonus-card{
+  position:relative;
+  background:var(--surface);
+  border:1.5px dashed var(--sage-d);
+  border-radius:var(--r-lg);
+  padding:72px 24px 28px;
+  text-align:center;
+  box-shadow:var(--shadow-md);
+  transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s ease;
+  display:flex;flex-direction:column;
+}
+.bonus-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+
+/* presente em CSS — caixa + tampa + laço */
+.giftbox{
+  position:absolute;
+  left:50%;top:-58px;
+  transform:translateX(-50%);
+  width:96px;height:96px;
+  pointer-events:none;
+  filter:drop-shadow(0 14px 18px rgba(43,37,32,.25));
+}
+.giftbox .box{
+  position:absolute;left:8%;bottom:0;
+  width:84%;height:62%;
+  background:linear-gradient(180deg,#D9913F 0%,#C97B3F 60%,#A8632C 100%);
+  border-radius:6px;
+  box-shadow:inset 0 -6px 0 rgba(0,0,0,.18), inset 0 1px 0 rgba(255,255,255,.25);
+}
+.giftbox .box::before{ /* fita vertical */
+  content:"";position:absolute;left:46%;top:0;bottom:0;width:8%;
+  background:linear-gradient(180deg,#E8D29A 0%,#C9A24A 100%);
+  box-shadow:inset 0 0 0 1px rgba(142,111,44,.4);
+}
+.giftbox .lid{
+  position:absolute;left:2%;top:24%;
+  width:96%;height:22%;
+  background:linear-gradient(180deg,#E08C3A 0%,#B7611E 100%);
+  border-radius:6px;
+  box-shadow:inset 0 -3px 0 rgba(0,0,0,.18), inset 0 1px 0 rgba(255,255,255,.35);
+  z-index:2;
+}
+.giftbox .lid::before{ /* fita horizontal */
+  content:"";position:absolute;left:0;right:0;top:50%;height:32%;
+  transform:translateY(-50%);
+  background:linear-gradient(180deg,#E8D29A 0%,#C9A24A 100%);
+  box-shadow:inset 0 0 0 1px rgba(142,111,44,.4);
+}
+.giftbox .bow-l,.giftbox .bow-r{
+  position:absolute;top:0;
+  width:38%;height:38%;
+  background:radial-gradient(circle at 35% 35%,#F1D982 0%,#C9A24A 60%,#8E6F2C 100%);
+  border-radius:50% 50% 50% 12%;
+  box-shadow:inset 0 -2px 0 rgba(0,0,0,.15), inset 0 1px 0 rgba(255,255,255,.4);
+  z-index:3;
+}
+.giftbox .bow-l{left:8%;transform:rotate(-25deg)}
+.giftbox .bow-r{right:8%;transform:rotate(25deg) scaleX(-1)}
+.giftbox .knot{
+  position:absolute;left:50%;top:14%;
+  transform:translateX(-50%);
+  width:18%;height:18%;border-radius:50%;
+  background:radial-gradient(circle at 35% 35%,#F1D982,#8E6F2C);
+  z-index:4;
+  box-shadow:inset 0 -1px 0 rgba(0,0,0,.2);
+}
+
+.bonus-card .bonus-tag{
+  display:inline-block;
+  font-family:var(--sans);
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--amber-d);
+  background:rgba(201,123,63,.12);
+  padding:5px 10px;
+  border-radius:999px;
+  margin-bottom:14px;
+  align-self:center;
+}
+.bonus-card h3{
+  font-family:var(--serif);
+  font-size:19px;
+  line-height:1.25;
+  margin:0 0 12px;
+  color:var(--ink);
+  text-wrap:balance;
+}
+.bonus-card .bonus-desc{
+  font-size:15px;
+  color:var(--ink-2);
+  line-height:1.55;
+  margin:0 0 22px;
+  flex:1;
+}
+.bonus-card .bonus-price{
+  border-top:1px dashed var(--line);
+  padding-top:18px;
+  display:flex;flex-direction:column;gap:6px;align-items:center;
+}
+.bonus-card .bonus-price .v{
+  font-size:13px;color:var(--muted);
+  display:inline-flex;align-items:center;gap:6px;
+}
+.bonus-card .bonus-price .v s{font-weight:600}
+.bonus-card .bonus-price .free{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:var(--sans);
+  font-weight:700;
+  font-size:14.5px;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color:var(--sage-dd);
+  background:rgba(143,166,142,.22);
+  padding:8px 14px;
+  border-radius:999px;
+}
+.bonus-card .bonus-price .free::before{
+  content:"";width:8px;height:8px;border-radius:50%;background:var(--sage-d);
+  box-shadow:0 0 0 4px rgba(94,122,96,.25);
+}
+
+@keyframes giftWiggle{
+  0%,100%{transform:translateX(-50%) rotate(0)}
+  20%{transform:translateX(-50%) rotate(-4deg)}
+  60%{transform:translateX(-50%) rotate(3deg)}
+}
+.bonus-card:hover .giftbox{animation:giftWiggle .9s ease-in-out}
+
+@media(prefers-reduced-motion:reduce){
+  .bonus-card:hover .giftbox{animation:none}
+}
+
+/* total dos bônus */
+.bonus-total{
+  margin:60px auto 0;
+  max-width:560px;
+  text-align:center;
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:var(--r-lg);
+  padding:24px 22px;
+  box-shadow:var(--shadow-sm);
+}
+.bonus-total .l{
+  font-family:var(--serif);font-style:italic;color:var(--ink-2);
+  font-size:16px;margin-bottom:6px;
+}
+.bonus-total .v{
+  font-family:var(--serif);
+  font-size:clamp(28px,4vw,36px);
+  font-weight:700;
+  color:var(--sage-dd);
+  letter-spacing:-0.01em;
+}
+.bonus-total .v s{color:var(--muted);font-weight:400;font-size:.65em;margin-right:10px}
+
+/* ============================================================
+   MÓDULOS — cards envolvendo as artes
+   ============================================================ */
+.modulos{
+  background:
+    radial-gradient(900px 500px at 50% -10%,rgba(63,87,66,.10),transparent 60%),
+    var(--bg);
+}
+.modulos .section-head h2 em{color:var(--sage-dd);font-style:italic}
+.mod-grid{
+  display:grid;
+  gap:24px;
+  grid-template-columns:1fr;
+}
+@media(min-width:560px){.mod-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1024px){.mod-grid{grid-template-columns:repeat(4,1fr);gap:28px}}
+
+.mod-card{
+  display:flex;flex-direction:column;
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:var(--r-lg);
+  padding:18px 18px 22px;
+  box-shadow:var(--shadow-md);
+  transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s ease,border-color .25s ease;
+  text-align:center;
+  position:relative;
+}
+.mod-card::before{
+  content:"";
+  position:absolute;inset:0;
+  border-radius:inherit;
+  background:linear-gradient(180deg,rgba(143,166,142,.06) 0%,transparent 35%);
+  pointer-events:none;
+}
+.mod-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:rgba(143,166,142,.5)}
+.mod-card .art{
+  width:100%;
+  aspect-ratio:3/4.6;
+  display:block;
+  background:linear-gradient(180deg,#F1E9D6 0%,#E5D9BD 100%);
+  border-radius:var(--r-md);
+  overflow:hidden;
+  position:relative;
+}
+.mod-card .art img{
+  width:100%;height:100%;
+  object-fit:cover;
+  display:block;
+  user-select:none;
+  -webkit-user-drag:none;
+  transition:transform .6s cubic-bezier(.2,.8,.2,1);
+}
+.mod-card:hover .art img{transform:scale(1.03)}
+.mod-card .desc{
+  margin:16px 0 0;
+  font-size:14.5px;
+  color:var(--ink-2);
+  line-height:1.5;
+  padding:0 4px;
+}
+.modulos-foot{
+  text-align:center;
+  margin-top:40px;
+  color:var(--muted);
+  font-style:italic;
+  font-family:var(--serif);
+  font-size:15.5px;
+}
+
 .inclui{background:var(--bg)}
 .inclui-grid{display:grid;gap:32px;grid-template-columns:1fr;align-items:center}
 @media(min-width:900px){.inclui-grid{grid-template-columns:1fr 1fr;gap:56px}}
@@ -251,11 +498,12 @@ footer .disclaimer{border-top:1px solid rgba(255,255,255,.08);margin-top:22px;pa
 .hero-mockup img{animation:float 6s ease-in-out infinite}
 
 @keyframes pulseGlow{
-  0%,100%{box-shadow:0 14px 28px -10px rgba(201,123,63,.6),inset 0 -2px 0 rgba(0,0,0,.12),0 0 0 0 rgba(201,123,63,.5)}
-  50%{box-shadow:0 14px 28px -10px rgba(201,123,63,.7),inset 0 -2px 0 rgba(0,0,0,.12),0 0 0 12px rgba(201,123,63,0)}
+  0%,100%{transform:scale(1);box-shadow:0 14px 28px -10px rgba(201,123,63,.55),inset 0 -2px 0 rgba(0,0,0,.12),inset 0 0 0 0 rgba(255,255,255,0)}
+  50%{transform:scale(1.025);box-shadow:0 20px 36px -10px rgba(201,123,63,.75),inset 0 -2px 0 rgba(0,0,0,.12),inset 0 0 22px 0 rgba(255,255,255,.18)}
 }
-.cta{animation:pulseGlow 2.6s ease-in-out infinite}
-.cta:hover{animation-play-state:paused}
+.cta{animation:pulseGlow 2.4s ease-in-out infinite;transform-origin:center}
+.cta:hover{animation-play-state:paused;transform:translateY(-2px) scale(1.03);background:var(--amber-d)}
+.cta:hover{box-shadow:0 22px 40px -10px rgba(201,123,63,.75),inset 0 -2px 0 rgba(0,0,0,.14)}
 
 @keyframes shimmer{
   0%{background-position:-200% 0}
@@ -474,6 +722,132 @@ footer .disclaimer{border-top:1px solid rgba(255,255,255,.08);margin-top:22px;pa
     </div>
   </div>
 </section>
+<section class="modulos">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Conteúdo do ebook</span>
+      <h2>O que você encontra dentro do <em>Cão Mais Calmo em 14 Dias</em>?</h2>
+      <p>O método é dividido em 8 módulos progressivos. Você avança no seu ritmo — mas cada módulo conecta no próximo.</p>
+    </div>
+
+    <div class="mod-grid">
+
+      <article class="mod-card reveal">
+        <div class="art"><img src="assets/modulo-01.jpg" alt="Módulo 1 — Identifique a Origem da Raiva" loading="lazy" /></div>
+        <p class="desc">Descubra a causa real por trás da agressividade do seu cão. Sem suposição, sem culpa.</p>
+      </article>
+
+      <article class="mod-card reveal">
+        <div class="art"><img src="assets/modulo-02.jpg" alt="Módulo 2 — A linguagem que ele usa antes de morder" loading="lazy" /></div>
+        <p class="desc">Aprenda os sinais que vem antes do rosnado. Você passa a antecipar — e não reagir.</p>
+      </article>
+
+      <article class="mod-card reveal">
+        <div class="art"><img src="assets/modulo-03.jpg" alt="Módulo 3 — O Mapa dos Gatilhos" loading="lazy" /></div>
+        <p class="desc">Identifique o que dispara a reação do seu cão e como neutralizar cada situação.</p>
+      </article>
+
+      <article class="mod-card reveal">
+        <div class="art"><img src="assets/modulo-04.jpg" alt="Módulo 4 — Modo de Contenção Imediata" loading="lazy" /></div>
+        <p class="desc">Protocolo prático para as primeiras 24h. Pare os episódios hoje, sem improviso.</p>
+      </article>
+
+      <article class="mod-card reveal">
+        <div class="art"><img src="assets/modulo-05.jpg" alt="Módulo 5 — Os 14 Dias: O Protocolo Completo" loading="lazy" /></div>
+        <p class="desc">O plano dia a dia, passo a passo. Você só precisa seguir.</p>
+      </article>
+
+      <article class="mod-card reveal">
+        <div class="art"><img src="assets/modulo-06.jpg" alt="Módulo 6 — Missões Específicas" loading="lazy" /></div>
+        <p class="desc">Exercícios direcionados para cada tipo de comportamento e cada nível de gravidade.</p>
+      </article>
+
+      <article class="mod-card reveal">
+        <div class="art"><img src="assets/modulo-07.jpg" alt="Módulo 7 — Quando parece que não está funcionando" loading="lazy" /></div>
+        <p class="desc">Como identificar recaídas, ajustar a rota e voltar ao progresso sem desanimar.</p>
+      </article>
+
+      <article class="mod-card reveal">
+        <div class="art"><img src="assets/modulo-08.jpg" alt="Módulo 8 — O Novo Normal" loading="lazy" /></div>
+        <p class="desc">Como sustentar o resultado pra vida toda — sem voltar pro ponto de partida.</p>
+      </article>
+
+    </div>
+
+    <p class="modulos-foot reveal">+ <strong>3 bônus exclusivos</strong> em ebook que você verá abaixo.</p>
+  </div>
+</section>
+
+<section class="bonus">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Bônus inclusos</span>
+      <h2>Além do método, você ainda recebe<br/><em>3 bônus exclusivos</em>.</h2>
+      <p>Sem custo adicional. Tudo entregue junto com o ebook principal.</p>
+    </div>
+
+    <div class="bonus-grid">
+
+      <article class="bonus-card reveal">
+        <div class="giftbox" aria-hidden="true">
+          <div class="box"></div>
+          <div class="lid"></div>
+          <div class="bow-l"></div>
+          <div class="bow-r"></div>
+          <div class="knot"></div>
+        </div>
+        <span class="bonus-tag">Bônus 01</span>
+        <h3>Alimentação Natural<br/>que ajuda na calma do cão</h3>
+        <p class="bonus-desc">Quais alimentos acalmam o sistema nervoso do seu cachorro — e quais ingredientes do dia a dia podem estar piorando a agitação e a agressividade.</p>
+        <div class="bonus-price">
+          <span class="v">Valor individual: <s>R$ 17</s></span>
+          <span class="free">Hoje: grátis</span>
+        </div>
+      </article>
+
+      <article class="bonus-card reveal">
+        <div class="giftbox" aria-hidden="true">
+          <div class="box"></div>
+          <div class="lid"></div>
+          <div class="bow-l"></div>
+          <div class="bow-r"></div>
+          <div class="knot"></div>
+        </div>
+        <span class="bonus-tag">Bônus 02</span>
+        <h3>Adestramento em Casa:<br/>o básico que todo cão precisa saber</h3>
+        <p class="bonus-desc">Os comandos essenciais (senta, fica, vem, no lugar) ensinados sem grito e sem coleira de enforcamento — em poucos minutos por dia, dentro de casa.</p>
+        <div class="bonus-price">
+          <span class="v">Valor individual: <s>R$ 17</s></span>
+          <span class="free">Hoje: grátis</span>
+        </div>
+      </article>
+
+      <article class="bonus-card reveal">
+        <div class="giftbox" aria-hidden="true">
+          <div class="box"></div>
+          <div class="lid"></div>
+          <div class="bow-l"></div>
+          <div class="bow-r"></div>
+          <div class="knot"></div>
+        </div>
+        <span class="bonus-tag">Bônus 03</span>
+        <h3>Primeiros Socorros Pet<br/>e manejo de estresse agudo</h3>
+        <p class="bonus-desc">O que fazer nos primeiros minutos de um susto, mordida, briga ou crise de pânico — com checklist pra imprimir e deixar na geladeira.</p>
+        <div class="bonus-price">
+          <span class="v">Valor individual: <s>R$ 17</s></span>
+          <span class="free">Hoje: grátis</span>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="bonus-total reveal">
+      <div class="l">Valor total dos bônus:</div>
+      <div class="v"><s>R$ 51</s>Inclusos no seu acesso</div>
+    </div>
+  </div>
+</section>
+
 <section class="testi">
   <div class="container">
     <div class="section-head reveal">
@@ -636,7 +1010,7 @@ footer .disclaimer{border-top:1px solid rgba(255,255,255,.08);margin-top:22px;pa
     return;
   }
   // Stagger automático para irmãos com .reveal dentro do mesmo container
-  const groups = ['.pillars', '.pain-list', '.faq-list', '.value-list'];
+  const groups = ['.pillars', '.pain-list', '.faq-list', '.value-list', '.mod-grid', '.bonus-grid'];
   groups.forEach(sel => {
     document.querySelectorAll(sel).forEach(group => {
       [...group.children].forEach((child, i) => {
