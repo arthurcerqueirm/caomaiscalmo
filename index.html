@@ -8,6 +8,9 @@
 
 <!-- Inserir pixel Meta e Google Tag aqui -->
 
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="shortcut icon" href="favicon.svg" />
+
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -1111,6 +1114,32 @@ footer .disclaimer{border-top:1px solid rgba(255,255,255,.08);margin-top:22px;pa
   }
   tick();
 })();
+</script>
+
+<script>
+// UTM passthrough — anexa utm_* e src da URL atual aos links Kiwify
+document.addEventListener('DOMContentLoaded', function () {
+  var pageParams = new URLSearchParams(window.location.search);
+  var toPass = new URLSearchParams();
+
+  pageParams.forEach(function (value, key) {
+    if (key === 'src' || key.indexOf('utm_') === 0) {
+      toPass.set(key, value);
+    }
+  });
+
+  if (!toPass.toString()) return; // sem parâmetros relevantes, não faz nada
+
+  document.querySelectorAll('a[href*="kiwify.com.br"], a[href*="kiwify.app"]').forEach(function (link) {
+    var dest = new URL(link.href, window.location.href);
+    toPass.forEach(function (value, key) {
+      if (!dest.searchParams.has(key)) {
+        dest.searchParams.set(key, value);
+      }
+    });
+    link.href = dest.toString();
+  });
+});
 </script>
 </body>
 </html>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Ear left -->
+  <path d="M 55 310 Q 30 180 75 100 Q 110 40 170 80 Q 200 100 195 200 Z" fill="#C47830" stroke="#1A1008" stroke-width="22" stroke-linejoin="round"/>
+  <!-- Ear right -->
+  <path d="M 457 310 Q 482 180 437 100 Q 402 40 342 80 Q 312 100 317 200 Z" fill="#C47830" stroke="#1A1008" stroke-width="22" stroke-linejoin="round"/>
+  <!-- Head -->
+  <ellipse cx="256" cy="255" rx="195" ry="185" fill="#C47830" stroke="#1A1008" stroke-width="22"/>
+  <!-- White muzzle -->
+  <ellipse cx="256" cy="330" rx="125" ry="108" fill="#F2E8D0"/>
+  <!-- Center line (forehead) -->
+  <path d="M256 80 Q254 180 256 295" fill="none" stroke="#1A1008" stroke-width="14" stroke-linecap="round"/>
+  <!-- Eye left -->
+  <circle cx="192" cy="215" r="24" fill="#1A1008"/>
+  <!-- Eye right -->
+  <circle cx="320" cy="215" r="24" fill="#1A1008"/>
+  <!-- Nose -->
+  <ellipse cx="256" cy="295" rx="30" ry="24" fill="#252535"/>
+  <!-- Mouth line -->
+  <path d="M222 335 Q256 362 290 335" fill="none" stroke="#9A8878" stroke-width="11" stroke-linecap="round"/>
+  <!-- Tongue -->
+  <ellipse cx="256" cy="375" rx="32" ry="24" fill="#F4A0A8"/>
+</svg>
