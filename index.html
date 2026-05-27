@@ -1,1072 +1,1797 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Cão Mais Calmo em 14 Dias — Método para Pais de Pet</title>
-<meta name="description" content="O método caseiro que reabilita a agressividade do seu cachorro sem adestrador particular, sem medicação e sem precisar entregar seu melhor amigo." />
+<meta name="description" content="O método caseiro que reabilita a agressividade do seu cachorro em até 14 dias, sem adestrador particular, sem medicação e sem precisar entregar seu melhor amigo.">
 
-<!-- Inserir pixel Meta e Google Tag aqui -->
+<!-- INSERIR PIXEL META E GOOGLE TAG AQUI -->
 
-<link rel="icon" type="image/svg+xml" href="favicon.svg" />
-<link rel="shortcut icon" href="favicon.svg" />
-
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Poppins:wght@400;500;600;700;800&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
 
 <style>
+/* ============================================================
+   RESET + TOKENS
+   ============================================================ */
 :root{
-  --bg:#F6F1E8; --bg-2:#EFE7D7; --surface:#FDFBF6;
-  --ink:#2B2520; --ink-2:#4A3F36; --muted:#7A6D5F; --line:#E3D8C3;
-  --sage:#8FA68E; --sage-d:#5E7A60; --sage-dd:#3F5742;
-  --amber:#C97B3F; --amber-d:#A8632C; --gold:#C9A24A; --danger-soft:#B5654B;
+  --bg:#0b1830;
+  --bg-2:#0e2040;
+  --bg-3:#15294f;
+  --surface:#1a3157;
+  --ink:#ffffff;
+  --ink-2:#d9e6f5;
+  --muted:#8aa3c4;
+  --accent:#3fc6ff;
+  --accent-2:#5cd3ff;
+  --accent-dark:#1a8fc2;
+  --amber:#ffb547;
+  --amber-2:#ffc97a;
+  --success:#43ff8b;
+  --danger:#ff5e5e;
+  --line:rgba(255,255,255,.10);
+  --line-2:rgba(255,255,255,.18);
   --r-sm:10px; --r-md:16px; --r-lg:22px; --r-xl:32px;
-  --shadow-sm:0 1px 2px rgba(43,37,32,.06),0 2px 6px rgba(43,37,32,.04);
-  --shadow-md:0 6px 16px rgba(43,37,32,.08),0 2px 6px rgba(43,37,32,.05);
-  --shadow-lg:0 24px 48px -12px rgba(43,37,32,.22),0 8px 16px -8px rgba(43,37,32,.12);
-  --serif:"Lora",Georgia,"Times New Roman",serif;
-  --sans:"DM Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --shadow-sm:0 1px 2px rgba(0,0,0,.20),0 2px 6px rgba(0,0,0,.18);
+  --shadow-md:0 6px 16px rgba(0,0,0,.28),0 2px 6px rgba(0,0,0,.20);
+  --shadow-lg:0 24px 48px -12px rgba(0,0,0,.55),0 8px 16px -8px rgba(0,0,0,.35);
+  --serif:"Marcellus", Georgia, serif;
+  --sans:"Poppins", system-ui, -apple-system, sans-serif;
+  --mont:"Montserrat", "Poppins", sans-serif;
 }
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
-html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
-body{font-family:var(--sans);font-size:17px;line-height:1.6;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
-img{max-width:100%;display:block}
-a{color:inherit}
-button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
-h1,h2,h3,h4{font-family:var(--serif);font-weight:600;letter-spacing:-0.01em;line-height:1.15;color:var(--ink);margin:0 0 .5em;text-wrap:balance}
-h1{font-size:clamp(34px,7.5vw,60px);letter-spacing:-0.02em}
-@media(max-width:899px){.hero h1{font-size:clamp(44px,11vw,58px);letter-spacing:-0.025em;line-height:1.05}}
-h2{font-size:clamp(26px,4.6vw,40px)}
-h3{font-size:clamp(20px,2.6vw,26px)}
-p{text-wrap:pretty}
-.container{width:100%;max-width:680px;margin:0 auto;padding:0 22px}
-@media(min-width:768px){.container{max-width:1100px;padding:0 32px}}
-section{padding:64px 0;position:relative}
-@media(min-width:768px){section{padding:96px 0}}
-.eyebrow{display:inline-block;font-family:var(--sans);font-size:11.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--sage-dd);background:rgba(143,166,142,.16);padding:7px 12px;border-radius:999px;margin-bottom:18px}
-.muted{color:var(--muted)}
+html{-webkit-text-size-adjust:100%; scroll-behavior:smooth}
+body{
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.6;
+  color:var(--ink-2);
+  background:var(--bg);
+  background-image:
+    radial-gradient(1200px 700px at 80% -10%, rgba(63,198,255,.15), transparent 60%),
+    radial-gradient(900px 600px at -10% 30%, rgba(63,198,255,.08), transparent 60%),
+    linear-gradient(180deg, #0a1628 0%, #0b1830 100%);
+  background-attachment:fixed;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%; display:block}
+a{color:inherit; text-decoration:none}
+button{font:inherit; cursor:pointer; border:0; background:none; color:inherit}
+
+h1,h2,h3,h4{font-family:var(--serif); font-weight:400; line-height:1.15; color:var(--ink); margin:0 0 .5em; letter-spacing:-0.01em}
+h1{font-size:clamp(28px,5.5vw,46px)}
+h2{font-size:clamp(24px,4.2vw,38px)}
+h3{font-size:clamp(18px,2.4vw,22px)}
+
+p{margin:0 0 1em}
+.accent{color:var(--accent)}
+.amber{color:var(--amber)}
+.success{color:var(--success)}
+.danger{color:var(--danger)}
+strong{font-weight:700; color:var(--ink)}
+em{font-style:italic; color:var(--accent)}
+s{color:var(--muted)}
+
+.container{width:100%; max-width:1180px; margin:0 auto; padding:0 20px}
+.container-narrow{max-width:920px}
 .center{text-align:center}
 
-.cta{display:inline-flex;align-items:center;justify-content:center;gap:12px;background:var(--amber);color:#fff;font-weight:700;font-size:18px;letter-spacing:.04em;text-transform:uppercase;padding:22px 32px;border-radius:16px;text-decoration:none;box-shadow:0 14px 28px -10px rgba(201,123,63,.6),inset 0 -2px 0 rgba(0,0,0,.12);transition:transform .15s ease,box-shadow .2s ease,background .2s ease;width:100%;max-width:540px;text-align:center;line-height:1.2}
-@media(min-width:768px){.cta{font-size:19px;padding:24px 36px}}
-.cta:hover{background:var(--amber-d);transform:translateY(-1px)}
-.cta:active{transform:translateY(1px)}
-.cta .arrow{display:inline-block;transition:transform .2s}
-.cta:hover .arrow{transform:translateX(3px)}
-.cta-micro{margin-top:12px;font-size:13.5px;color:var(--muted);display:flex;gap:14px;align-items:center;flex-wrap:wrap;justify-content:center}
-.cta-micro .dot{width:3px;height:3px;background:var(--muted);border-radius:50%;display:inline-block}
-.stars{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--ink-2);margin-top:22px;flex-wrap:wrap}
-.stars .star-row{display:inline-flex;gap:2px;color:var(--gold)}
-
-.hero{position:relative;background-color:var(--bg);padding:48px 0 88px;overflow:hidden;isolation:isolate}
-.hero .container{max-width:680px}
-@media(min-width:768px){.hero .container{max-width:1180px}}
-@media(min-width:1400px){.hero .container{max-width:1320px}}
-.hero::before{content:"";position:absolute;inset:0;z-index:-2;background-image:url('assets/hero-bg.png');background-size:cover;background-position:center;background-repeat:no-repeat;opacity:.55}
-.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(900px 500px at 85% -10%,rgba(143,166,142,.22),transparent 60%),radial-gradient(700px 400px at -10% 30%,rgba(201,123,63,.10),transparent 60%),linear-gradient(180deg,rgba(246,241,232,.4) 0%,rgba(246,241,232,.85) 100%)}
-@media(min-width:768px){.hero{padding:72px 0 128px}}
-@media(min-width:1100px){.hero{padding:88px 0 160px}}
-.hero-grid{display:grid;grid-template-columns:1fr;gap:36px;align-items:center}
-@media(min-width:900px){.hero-grid{grid-template-columns:1fr 1.15fr;gap:48px}}
-@media(min-width:1100px){.hero-grid{grid-template-columns:1fr 1.25fr;gap:64px}}
-
-/* === Mobile: reorder hero === */
-/* Ordem: eyebrow > headline > mockup > descricao > cta > microcopy > stars */
-@media(max-width:899px){
-  .hero-grid{gap:20px}
-  .hero-text{display:contents}
-  .hero-text .eyebrow{order:1}
-  .hero-text h1{order:2;margin-bottom:0}
-  .hero-mockup{order:3;margin:4px 0}
-  .hero-text .hero-sub{order:4;margin:0 0 4px}
-  .hero-text .cta{order:5}
-  .hero-text .cta-micro{order:6;margin-top:8px}
-  .hero-text .stars{order:7;margin-top:14px;justify-content:center;text-align:center}
-  .hero-text{text-align:center}
-  .hero-text .hero-sub{margin-left:auto;margin-right:auto}
-}
-.hero h1 span.accent{color:var(--sage-dd);font-style:italic}
-.hero-sub{font-size:clamp(16px,2.1vw,19.5px);color:var(--ink-2);margin:18px 0 28px;max-width:56ch}
-
-.hero-mockup{display:flex;justify-content:center;align-items:center}
-.hero-mockup img{width:100%;max-width:520px;height:auto;display:block;filter:drop-shadow(0 24px 36px rgba(43,37,32,.18));user-select:none;-webkit-user-drag:none}
-@media(max-width:899px){.hero-mockup img{max-width:440px}}
-@media(max-width:480px){.hero-mockup img{max-width:92vw}}
-@media(min-width:900px){.hero-mockup img{max-width:640px}}
-@media(min-width:1100px){.hero-mockup img{max-width:780px}}
-@media(min-width:1400px){.hero-mockup img{max-width:880px}}
-.ebook{position:absolute;width:58%;aspect-ratio:3/4.2;left:50%;top:50%;transform:translate(-50%,-50%) rotateY(-14deg) rotateX(4deg) rotateZ(-2deg);background:linear-gradient(160deg,#93A892 0%,#6E8A6F 55%,#50704F 100%);border-radius:6px 14px 14px 6px;box-shadow:-4px 0 0 rgba(0,0,0,.18),-6px 0 0 rgba(255,255,255,.06),var(--shadow-lg);padding:22px;color:#F6F1E8;display:flex;flex-direction:column;z-index:3;overflow:hidden}
-.ebook::before{content:"";position:absolute;left:0;top:0;bottom:0;width:10px;background:linear-gradient(90deg,rgba(0,0,0,.25),rgba(255,255,255,.06) 60%,transparent)}
-.ebook::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,rgba(255,255,255,.18) 0%,transparent 35%,transparent 65%,rgba(0,0,0,.12) 100%);pointer-events:none}
-.ebook .brand{font-family:var(--sans);font-size:9.5px;letter-spacing:.28em;text-transform:uppercase;opacity:.85;margin-bottom:auto}
-.ebook .title{font-family:var(--serif);font-size:clamp(22px,3.6vw,30px);line-height:1.02;font-weight:700;letter-spacing:-0.01em;margin-bottom:14px}
-.ebook .title em{font-style:italic;color:#E8D8A8;font-weight:500}
-.ebook .silhouette{height:38%;width:100%;background:radial-gradient(120% 100% at 50% 100%,rgba(0,0,0,.35),transparent 60%),radial-gradient(closest-side at 30% 60%,#1d2a1e 60%,transparent 62%),radial-gradient(closest-side at 60% 50%,#1d2a1e 50%,transparent 52%),radial-gradient(closest-side at 75% 64%,#1d2a1e 38%,transparent 40%);background-size:100% 30%,60% 70%,70% 60%,35% 50%;background-repeat:no-repeat;background-position:bottom,20% 80%,55% 70%,75% 75%;margin-top:8px;opacity:.9}
-.ebook .footer{margin-top:14px;font-family:var(--sans);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;opacity:.85;border-top:1px solid rgba(246,241,232,.25);padding-top:10px}
-
-.phone{position:absolute;width:30%;aspect-ratio:9/19;right:0;bottom:4%;background:#1c1815;border-radius:22px;padding:6px;box-shadow:var(--shadow-lg),inset 0 0 0 1.5px #3a312b;transform:rotate(8deg);z-index:4}
-.phone .screen{width:100%;height:100%;background:linear-gradient(180deg,#4a6b4c 0%,#2f4a32 100%);border-radius:16px;position:relative;overflow:hidden}
-.phone .notch{position:absolute;left:50%;top:6px;transform:translateX(-50%);width:36%;height:12px;background:#1c1815;border-radius:999px}
-.phone .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 14px rgba(0,0,0,.3)}
-.phone .play::before{content:"";width:0;height:0;border-left:12px solid var(--sage-dd);border-top:8px solid transparent;border-bottom:8px solid transparent;margin-left:3px}
-.phone .caption{position:absolute;bottom:14px;left:8px;right:8px;font-family:var(--sans);font-size:8.5px;line-height:1.3;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.4)}
-
-.diary{position:absolute;width:46%;aspect-ratio:3/4;left:-2%;top:8%;background:#FDFBF6;border-radius:4px;box-shadow:var(--shadow-md);transform:rotate(-9deg);padding:14px 12px;z-index:1;border:1px solid var(--line)}
-.diary .line{height:5px;background:var(--line);border-radius:3px;margin-bottom:8px}
-.diary .line.s{width:60%}.diary .line.m{width:80%}
-.diary .head{font-family:var(--serif);font-size:11px;font-weight:600;color:var(--ink-2);margin-bottom:10px;text-transform:uppercase;letter-spacing:.15em}
-.diary .check{display:flex;align-items:center;gap:6px;margin-bottom:8px;font-size:9px;color:var(--muted)}
-.diary .check .box{width:9px;height:9px;border:1.2px solid var(--sage-d);border-radius:2px;background:var(--sage)}
-.diary .check.empty .box{background:transparent}
-
-.seal{position:absolute;top:0;right:4%;width:88px;height:88px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#E5C572 0%,#C9A24A 55%,#8E6F2C 100%);color:#2B2520;display:flex;align-items:center;justify-content:center;text-align:center;font-family:var(--sans);font-weight:700;font-size:10px;letter-spacing:.12em;text-transform:uppercase;line-height:1.1;box-shadow:0 10px 20px rgba(143,113,32,.35),inset 0 0 0 2px rgba(255,255,255,.4);transform:rotate(-8deg);z-index:5;padding:6px}
-.seal::before{content:"";position:absolute;inset:6px;border-radius:50%;border:1px dashed rgba(43,37,32,.4)}
-
-.section-head{text-align:center;max-width:760px;margin:0 auto 44px}
-.section-head p{color:var(--ink-2);font-size:17.5px}
-
-.pain{background:var(--bg-2)}
-.pain-list{list-style:none;padding:0;margin:0 auto;max-width:640px;display:grid;gap:14px}
-.pain-list li{display:flex;gap:14px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:16px 18px;font-size:16.5px;color:var(--ink-2);box-shadow:var(--shadow-sm)}
-.pain-list .ico{flex-shrink:0;width:22px;height:22px;margin-top:1px;display:inline-flex;align-items:center;justify-content:center;color:var(--danger-soft)}
-.pain-close{text-align:center;font-family:var(--serif);font-style:italic;font-size:clamp(18px,2.4vw,22px);color:var(--ink-2);max-width:600px;margin:38px auto 0}
-
-.why{background:var(--bg)}
-.why-card{max-width:760px;margin:0 auto;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:36px 28px;box-shadow:var(--shadow-md)}
-.why-card h2{text-align:center}.why-card h2 em{color:var(--sage-dd);font-style:italic}
-.why-card p{color:var(--ink-2)}
-
-.method{background:var(--bg-2)}
-.pillars{display:grid;gap:18px;grid-template-columns:1fr}
-@media(min-width:768px){.pillars{grid-template-columns:repeat(2,1fr);gap:22px}}
-@media(min-width:1024px){.pillars{grid-template-columns:repeat(4,1fr)}}
-.pillar{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:26px 22px;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;gap:12px;transition:transform .25s ease,box-shadow .25s ease}
-.pillar:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
-.pillar .num{font-family:var(--serif);font-style:italic;color:var(--sage-d);font-size:14px}
-.pillar .ico{width:44px;height:44px;border-radius:12px;display:inline-flex;align-items:center;justify-content:center;background:rgba(143,166,142,.18);color:var(--sage-dd);margin-bottom:4px}
-.pillar h3{margin:0;font-size:19px}
-.pillar p{margin:0;font-size:15.5px;color:var(--ink-2)}
+section{padding:56px 0; position:relative}
+@media(min-width:768px){section{padding:80px 0}}
 
 /* ============================================================
-   BÔNUS — cards de presente
+   CTA BUTTON
    ============================================================ */
-.bonus{
-  background:
-    radial-gradient(800px 500px at 50% 0%,rgba(201,162,74,.10),transparent 60%),
-    var(--bg-2);
-  position:relative;
-}
-.bonus .section-head .strong{color:var(--amber-d);font-style:italic}
-.bonus .section-head h2 em{color:var(--sage-dd);font-style:italic}
-.bonus-grid{
-  display:grid;
-  gap:80px 24px;
-  grid-template-columns:1fr;
-  margin-top:64px;
-}
-@media(min-width:768px){.bonus-grid{grid-template-columns:repeat(3,1fr);gap:90px 28px;margin-top:80px}}
-
-.bonus-card{
-  position:relative;
-  background:var(--surface);
-  border:1.5px dashed var(--sage-d);
-  border-radius:var(--r-lg);
-  padding:72px 24px 28px;
-  text-align:center;
-  box-shadow:var(--shadow-md);
-  transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s ease;
-  display:flex;flex-direction:column;
-}
-.bonus-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
-
-/* presente em CSS — caixa + tampa + laço */
-.giftbox{
-  position:absolute;
-  left:50%;top:-58px;
-  transform:translateX(-50%);
-  width:96px;height:96px;
-  pointer-events:none;
-  filter:drop-shadow(0 14px 18px rgba(43,37,32,.25));
-}
-.giftbox .box{
-  position:absolute;left:8%;bottom:0;
-  width:84%;height:62%;
-  background:linear-gradient(180deg,#D9913F 0%,#C97B3F 60%,#A8632C 100%);
-  border-radius:6px;
-  box-shadow:inset 0 -6px 0 rgba(0,0,0,.18), inset 0 1px 0 rgba(255,255,255,.25);
-}
-.giftbox .box::before{ /* fita vertical */
-  content:"";position:absolute;left:46%;top:0;bottom:0;width:8%;
-  background:linear-gradient(180deg,#E8D29A 0%,#C9A24A 100%);
-  box-shadow:inset 0 0 0 1px rgba(142,111,44,.4);
-}
-.giftbox .lid{
-  position:absolute;left:2%;top:24%;
-  width:96%;height:22%;
-  background:linear-gradient(180deg,#E08C3A 0%,#B7611E 100%);
-  border-radius:6px;
-  box-shadow:inset 0 -3px 0 rgba(0,0,0,.18), inset 0 1px 0 rgba(255,255,255,.35);
-  z-index:2;
-}
-.giftbox .lid::before{ /* fita horizontal */
-  content:"";position:absolute;left:0;right:0;top:50%;height:32%;
-  transform:translateY(-50%);
-  background:linear-gradient(180deg,#E8D29A 0%,#C9A24A 100%);
-  box-shadow:inset 0 0 0 1px rgba(142,111,44,.4);
-}
-.giftbox .bow-l,.giftbox .bow-r{
-  position:absolute;top:0;
-  width:38%;height:38%;
-  background:radial-gradient(circle at 35% 35%,#F1D982 0%,#C9A24A 60%,#8E6F2C 100%);
-  border-radius:50% 50% 50% 12%;
-  box-shadow:inset 0 -2px 0 rgba(0,0,0,.15), inset 0 1px 0 rgba(255,255,255,.4);
-  z-index:3;
-}
-.giftbox .bow-l{left:8%;transform:rotate(-25deg)}
-.giftbox .bow-r{right:8%;transform:rotate(25deg) scaleX(-1)}
-.giftbox .knot{
-  position:absolute;left:50%;top:14%;
-  transform:translateX(-50%);
-  width:18%;height:18%;border-radius:50%;
-  background:radial-gradient(circle at 35% 35%,#F1D982,#8E6F2C);
-  z-index:4;
-  box-shadow:inset 0 -1px 0 rgba(0,0,0,.2);
-}
-
-.bonus-card .bonus-tag{
-  display:inline-block;
-  font-family:var(--sans);
-  font-size:11px;
-  font-weight:700;
-  letter-spacing:.22em;
+.cta{
+  display:inline-flex; align-items:center; justify-content:center; gap:10px;
+  background:linear-gradient(180deg, #43ff8b 0%, #2bd96b 100%);
+  color:#0a2818;
+  font-family:var(--mont);
+  font-weight:800;
+  font-size:17px;
+  letter-spacing:.02em;
   text-transform:uppercase;
-  color:var(--amber-d);
-  background:rgba(201,123,63,.12);
-  padding:5px 10px;
-  border-radius:999px;
-  margin-bottom:14px;
-  align-self:center;
-}
-.bonus-card h3{
-  font-family:var(--serif);
-  font-size:19px;
+  padding:20px 28px;
+  border-radius:14px;
+  text-decoration:none;
+  box-shadow:0 14px 28px -10px rgba(43,217,107,.55), inset 0 -3px 0 rgba(0,0,0,.18), inset 0 1px 0 rgba(255,255,255,.4);
+  transition:transform .18s ease, box-shadow .25s ease, filter .2s ease;
+  width:100%;
+  max-width:580px;
+  text-align:center;
   line-height:1.25;
-  margin:0 0 12px;
-  color:var(--ink);
+  position:relative;
+  overflow:hidden;
   text-wrap:balance;
 }
-.bonus-card .bonus-desc{
-  font-size:15px;
-  color:var(--ink-2);
-  line-height:1.55;
-  margin:0 0 22px;
-  flex:1;
-}
-.bonus-card .bonus-price{
-  border-top:1px dashed var(--line);
-  padding-top:18px;
-  display:flex;flex-direction:column;gap:6px;align-items:center;
-}
-.bonus-card .bonus-price .v{
-  font-size:13px;color:var(--muted);
-  display:inline-flex;align-items:center;gap:6px;
-}
-.bonus-card .bonus-price .v s{font-weight:600}
-.bonus-card .bonus-price .free{
-  display:inline-flex;align-items:center;gap:8px;
-  font-family:var(--sans);
-  font-weight:700;
-  font-size:14.5px;
-  letter-spacing:.06em;
-  text-transform:uppercase;
-  color:var(--sage-dd);
-  background:rgba(143,166,142,.22);
-  padding:8px 14px;
-  border-radius:999px;
-}
-.bonus-card .bonus-price .free::before{
-  content:"";width:8px;height:8px;border-radius:50%;background:var(--sage-d);
-  box-shadow:0 0 0 4px rgba(94,122,96,.25);
-}
+.cta:hover{transform:translateY(-2px) scale(1.015); filter:brightness(1.06)}
+.cta:active{transform:translateY(1px)}
+.cta .arrow{transition:transform .2s}
+.cta:hover .arrow{transform:translateX(4px)}
 
-@keyframes giftWiggle{
-  0%,100%{transform:translateX(-50%) rotate(0)}
-  20%{transform:translateX(-50%) rotate(-4deg)}
-  60%{transform:translateX(-50%) rotate(3deg)}
+@keyframes ctaPulse{
+  0%,100%{transform:scale(1); box-shadow:0 14px 28px -10px rgba(43,217,107,.55), inset 0 -3px 0 rgba(0,0,0,.18), inset 0 1px 0 rgba(255,255,255,.4)}
+  50%{transform:scale(1.025); box-shadow:0 18px 36px -10px rgba(43,217,107,.7), inset 0 -3px 0 rgba(0,0,0,.18), inset 0 1px 0 rgba(255,255,255,.5)}
 }
-.bonus-card:hover .giftbox{animation:giftWiggle .9s ease-in-out}
+.cta{animation:ctaPulse 2.2s ease-in-out infinite}
+.cta:hover{animation-play-state:paused}
 
-@media(prefers-reduced-motion:reduce){
-  .bonus-card:hover .giftbox{animation:none}
-}
-
-/* total dos bônus */
-.bonus-total{
-  margin:60px auto 0;
-  max-width:560px;
-  text-align:center;
-  background:var(--surface);
-  border:1px solid var(--line);
-  border-radius:var(--r-lg);
-  padding:24px 22px;
-  box-shadow:var(--shadow-sm);
-}
-.bonus-total .l{
-  font-family:var(--serif);font-style:italic;color:var(--ink-2);
-  font-size:16px;margin-bottom:6px;
-}
-.bonus-total .v{
-  font-family:var(--serif);
-  font-size:clamp(28px,4vw,36px);
-  font-weight:700;
-  color:var(--sage-dd);
-  letter-spacing:-0.01em;
-}
-.bonus-total .v s{color:var(--muted);font-weight:400;font-size:.65em;margin-right:10px}
-
-/* ============================================================
-   MÓDULOS — cards envolvendo as artes
-   ============================================================ */
-.modulos{
-  background:
-    radial-gradient(900px 500px at 50% -10%,rgba(63,87,66,.10),transparent 60%),
-    var(--bg);
-}
-.modulos .section-head h2 em{color:var(--sage-dd);font-style:italic}
-.mod-grid{
-  display:grid;
-  gap:24px;
-  grid-template-columns:1fr;
-}
-@media(min-width:560px){.mod-grid{grid-template-columns:repeat(2,1fr)}}
-@media(min-width:1024px){.mod-grid{grid-template-columns:repeat(4,1fr);gap:28px}}
-
-.mod-card{
-  display:flex;flex-direction:column;
-  background:var(--surface);
-  border:1px solid var(--line);
-  border-radius:var(--r-lg);
-  padding:18px 18px 22px;
-  box-shadow:var(--shadow-md);
-  transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s ease,border-color .25s ease;
-  text-align:center;
-  position:relative;
-}
-.mod-card::before{
-  content:"";
-  position:absolute;inset:0;
-  border-radius:inherit;
-  background:linear-gradient(180deg,rgba(143,166,142,.06) 0%,transparent 35%);
-  pointer-events:none;
-}
-.mod-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:rgba(143,166,142,.5)}
-.mod-card .art{
-  width:100%;
-  aspect-ratio:3/4.6;
-  display:block;
-  background:linear-gradient(180deg,#F1E9D6 0%,#E5D9BD 100%);
-  border-radius:var(--r-md);
-  overflow:hidden;
-  position:relative;
-}
-.mod-card .art img{
-  width:100%;height:100%;
-  object-fit:cover;
-  display:block;
-  user-select:none;
-  -webkit-user-drag:none;
-  transition:transform .6s cubic-bezier(.2,.8,.2,1);
-}
-.mod-card:hover .art img{transform:scale(1.03)}
-.mod-card .desc{
-  margin:16px 0 0;
-  font-size:14.5px;
-  color:var(--ink-2);
-  line-height:1.5;
-  padding:0 4px;
-}
-.modulos-foot{
-  text-align:center;
-  margin-top:40px;
-  color:var(--muted);
-  font-style:italic;
-  font-family:var(--serif);
-  font-size:15.5px;
-}
-
-.inclui{background:var(--bg)}
-.inclui-grid{display:grid;gap:32px;grid-template-columns:1fr;align-items:center}
-@media(min-width:900px){.inclui-grid{grid-template-columns:1fr 1fr;gap:56px}}
-.product-stack{position:relative;width:100%;max-width:460px;aspect-ratio:1/1;margin:0 auto}
-.product-stack > div{position:absolute;border-radius:var(--r-md);box-shadow:var(--shadow-lg);border:1px solid rgba(43,37,32,.06)}
-.product-stack .ps-ebook{left:18%;top:8%;width:44%;aspect-ratio:3/4.2;background:linear-gradient(160deg,#93A892,#5E7A60);transform:rotate(-6deg);z-index:3;padding:18px;color:#F6F1E8;display:flex;flex-direction:column}
-.product-stack .ps-ebook .t{font-family:var(--serif);font-size:14px;font-weight:700;line-height:1.05;margin-top:8px}
-.product-stack .ps-ebook .tag{font-size:8.5px;letter-spacing:.22em;text-transform:uppercase;opacity:.85}
-.product-stack .ps-ebook .shape{margin-top:auto;height:40%;background:radial-gradient(closest-side at 35% 65%,#1d2a1e 60%,transparent 62%),radial-gradient(closest-side at 65% 55%,#1d2a1e 50%,transparent 52%);background-repeat:no-repeat}
-.product-stack .ps-video{right:6%;top:4%;width:40%;aspect-ratio:16/10;background:#1c1815;transform:rotate(7deg);padding:6px;z-index:4}
-.product-stack .ps-video .frame{width:100%;height:100%;background:linear-gradient(180deg,#5E7A60,#3F5742);border-radius:10px;position:relative}
-.product-stack .ps-video .play{position:absolute;inset:0;margin:auto;width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center}
-.product-stack .ps-video .play::before{content:"";width:0;height:0;border-left:10px solid var(--sage-dd);border-top:7px solid transparent;border-bottom:7px solid transparent;margin-left:3px}
-.product-stack .ps-diary{left:4%;bottom:8%;width:38%;aspect-ratio:3/4;background:#FDFBF6;transform:rotate(-12deg);padding:14px;z-index:2}
-.product-stack .ps-diary .h{font-family:var(--serif);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.15em;color:var(--ink-2);margin-bottom:10px}
-.product-stack .ps-diary .ln{height:4px;background:var(--line);border-radius:3px;margin-bottom:7px}
-.product-stack .ps-checklist{right:4%;bottom:4%;width:36%;aspect-ratio:3/4;background:#FDFBF6;transform:rotate(9deg);padding:14px;z-index:1}
-.product-stack .ps-checklist .h{font-family:var(--serif);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.15em;color:var(--ink-2);margin-bottom:12px}
-.product-stack .ps-checklist .it{display:flex;gap:6px;align-items:center;margin-bottom:8px;font-size:9px;color:var(--muted)}
-.product-stack .ps-checklist .it .b{width:9px;height:9px;border:1.2px solid var(--sage-d);border-radius:2px;background:var(--sage)}
-.product-stack .ps-checklist .it.e .b{background:transparent}
-
-.inclui-list{list-style:none;padding:0;margin:0;display:grid;gap:14px}
-.inclui-list li{display:flex;gap:14px;align-items:flex-start;padding:14px 4px;border-bottom:1px solid var(--line)}
-.inclui-list li:last-child{border-bottom:none}
-.inclui-list .ck{flex-shrink:0;width:26px;height:26px;background:var(--sage-dd);color:#fff;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;margin-top:2px}
-.inclui-list .meta strong{display:block;font-size:16px;color:var(--ink)}
-.inclui-list .meta span{display:block;font-size:14px;color:var(--muted);margin-top:2px}
-
-.testi{background:var(--bg-2);overflow:hidden}
-.testi .section-head h2 em{font-style:italic;color:var(--sage-dd)}
-.marquee{--gap:20px;position:relative;width:100%;margin-top:18px;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
-.marquee-track{display:flex;gap:var(--gap);width:max-content;animation:scroll 40s linear infinite;touch-action:pan-x;will-change:transform}
-.marquee:hover .marquee-track{animation-play-state:paused}
-@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-@media(prefers-reduced-motion:reduce){.marquee-track{animation-duration:120s}}
-
-/* Cards de depoimento — prints reais em formato celular */
-.chat-card{flex:0 0 240px;aspect-ratio:9/17;border-radius:26px;background:#000;box-shadow:var(--shadow-lg);overflow:hidden;display:block;position:relative;padding:6px}
-.chat-card img{width:100%;height:100%;object-fit:cover;object-position:top center;border-radius:20px;display:block;background:#ECE2CF;pointer-events:none;-webkit-user-drag:none;user-select:none}
-.chat-card .name-tag{position:absolute;left:14px;bottom:14px;background:rgba(255,255,255,.95);color:var(--ink);font-size:11.5px;font-weight:600;letter-spacing:.04em;padding:6px 10px;border-radius:999px;box-shadow:var(--shadow-sm);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
-@media(min-width:768px){.chat-card{flex-basis:280px}}
-.testi-disclaimer{text-align:center;font-size:12.5px;color:var(--muted);margin:22px auto 0;max-width:600px;padding:0 22px}
-
-.guarantee{background:var(--bg)}
-.guarantee-card{max-width:760px;margin:0 auto;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:40px 28px;box-shadow:var(--shadow-md);text-align:center}
-.shield{width:92px;height:110px;margin:0 auto 18px;background:var(--sage-dd);color:#fff;clip-path:path("M46 0 L92 14 L92 60 Q92 95 46 110 Q0 95 0 60 L0 14 Z");display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:var(--serif);line-height:1}
-.shield .n{font-size:30px;font-weight:700}
-.shield .d{font-size:12px;letter-spacing:.15em;text-transform:uppercase;margin-top:4px;font-family:var(--sans)}
-.guarantee-card p{color:var(--ink-2);max-width:60ch;margin:0 auto}
-
-.offer{background:radial-gradient(700px 400px at 50% -10%,rgba(143,166,142,.18),transparent 60%),var(--bg-2)}
-.offer-card{max-width:620px;margin:0 auto;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-xl);padding:36px 26px;box-shadow:var(--shadow-lg)}
-.offer-card h2{text-align:center}
-.value-list{list-style:none;padding:0;margin:22px 0 24px;display:grid;gap:10px}
-.value-list li{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px dashed var(--line);font-size:15.5px;align-items:center}
-.value-list li:last-of-type{border-bottom:none}
-.value-list .label{display:flex;gap:10px;align-items:center;color:var(--ink-2)}
-.value-list .label .ck{width:18px;height:18px;border-radius:50%;background:var(--sage-dd);color:#fff;font-size:11px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
-.value-list .price{color:var(--muted);text-decoration:line-through;font-variant-numeric:tabular-nums}
-.value-list .incluso{background:rgba(143,166,142,.2);color:var(--sage-dd);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:3px 8px;border-radius:999px;margin-left:6px}
-.total-row{display:flex;justify-content:space-between;align-items:baseline;padding-top:6px;font-size:16px;color:var(--ink-2);margin-bottom:16px}
-.total-row .v{font-weight:600;color:var(--ink)}
-.price-block{text-align:center;border-top:1px solid var(--line);padding-top:22px}
-.price-block .hoje{font-family:var(--serif);font-style:italic;font-size:18px;color:var(--ink-2);margin-bottom:4px}
-.price-block .old{color:var(--muted);text-decoration:line-through;font-size:18px}
-.price-block .now{font-family:var(--serif);font-size:clamp(48px,9vw,64px);color:var(--sage-dd);font-weight:700;line-height:1;margin:6px 0 4px;letter-spacing:-0.02em}
-.price-block .now small{font-size:24px;font-weight:500}
-.price-block .parc{color:var(--ink-2);font-size:15px}
-.offer-card .cta{margin-top:22px}
-
-.faq{background:var(--bg)}
-.faq-list{max-width:760px;margin:0 auto}
-.faq-item{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);margin-bottom:12px;overflow:hidden;box-shadow:var(--shadow-sm)}
-.faq-item summary{list-style:none;cursor:pointer;padding:20px 22px;display:flex;justify-content:space-between;gap:14px;font-family:var(--serif);font-weight:600;font-size:17px;color:var(--ink)}
-.faq-item summary::-webkit-details-marker{display:none}
-.faq-item summary::after{content:"+";font-family:var(--sans);font-weight:400;font-size:24px;color:var(--sage-dd);transition:transform .2s ease}
-.faq-item[open] summary::after{transform:rotate(45deg)}
-.faq-item .answer{padding:0 22px 20px;color:var(--ink-2);font-size:15.5px}
-
-.ps{background:radial-gradient(700px 400px at 50% 110%,rgba(143,166,142,.25),transparent 60%),var(--bg-2)}
-.ps-card{max-width:720px;margin:0 auto;text-align:center}
-.ps-card .ps-label{font-family:var(--serif);font-style:italic;color:var(--sage-dd);font-size:22px;margin-bottom:14px}
-.ps-card p{font-family:var(--serif);font-size:clamp(18px,2.4vw,22px);line-height:1.5;color:var(--ink);margin-bottom:32px}
-.ps-card .cta-wrap{display:flex;flex-direction:column;align-items:center;gap:10px}
-
-footer{background:#1f1b18;color:#cdbfae;padding:40px 0 120px;font-size:13.5px;line-height:1.55}
-footer .container{max-width:760px}
-footer .ft-top{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:flex-start;margin-bottom:22px}
-footer h4{color:#f3ead9;font-family:var(--serif);font-size:18px;margin-bottom:6px}
-footer a{color:#cdbfae;text-decoration:none}
-footer a:hover{color:#fff}
-footer .ft-links{display:flex;flex-wrap:wrap;gap:6px 18px}
-footer .disclaimer{border-top:1px solid rgba(255,255,255,.08);margin-top:22px;padding-top:18px;font-size:12.5px;color:#8a7e6e}
-
-.sticky-cta{position:fixed;left:0;right:0;bottom:0;background:var(--surface);padding:10px 16px calc(10px + env(safe-area-inset-bottom));border-top:1px solid var(--line);box-shadow:0 -10px 24px rgba(43,37,32,.08);display:flex;align-items:center;gap:12px;z-index:90;transform:translateY(120%);transition:transform .35s cubic-bezier(.4,0,.2,1)}
-.sticky-cta.show{transform:translateY(0)}
-.sticky-cta .meta{flex:1;min-width:0}
-.sticky-cta .meta .l{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.14em}
-.sticky-cta .meta .p{font-family:var(--serif);font-weight:700;font-size:18px;color:var(--ink)}
-.sticky-cta .meta .p s{color:var(--muted);font-weight:400;font-size:13px;margin-right:6px}
-.sticky-cta .cta{width:auto;min-width:170px;padding:16px 18px;font-size:14px;border-radius:14px}
-@media(min-width:900px){.sticky-cta{display:none}}
-@media(max-width:899px){body.has-sticky{padding-bottom:84px}}
-
-.reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1);transition-delay:var(--rd,0s)}
-.reveal.in{opacity:1;transform:none}
-.reveal.fade-left{transform:translateX(-30px)}
-.reveal.fade-right{transform:translateX(30px)}
-.reveal.zoom{transform:scale(.92)}
-.reveal.in.fade-left,.reveal.in.fade-right,.reveal.in.zoom{transform:none}
-
-/* ============================================================
-   ANIMAÇÕES GLOBAIS
-   ============================================================ */
-@keyframes float{
-  0%,100%{transform:translateY(0) rotate(0deg)}
-  50%{transform:translateY(-12px) rotate(-.3deg)}
-}
-.hero-mockup img{animation:float 6s ease-in-out infinite}
-
-@keyframes pulseGlow{
-  0%,100%{transform:scale(1);box-shadow:0 14px 28px -10px rgba(201,123,63,.55),inset 0 -2px 0 rgba(0,0,0,.12),inset 0 0 0 0 rgba(255,255,255,0)}
-  50%{transform:scale(1.025);box-shadow:0 20px 36px -10px rgba(201,123,63,.75),inset 0 -2px 0 rgba(0,0,0,.12),inset 0 0 22px 0 rgba(255,255,255,.18)}
-}
-.cta{animation:pulseGlow 2.4s ease-in-out infinite;transform-origin:center}
-.cta:hover{animation-play-state:paused;transform:translateY(-2px) scale(1.03);background:var(--amber-d)}
-.cta:hover{box-shadow:0 22px 40px -10px rgba(201,123,63,.75),inset 0 -2px 0 rgba(0,0,0,.14)}
-
-@keyframes shimmer{
+@keyframes ctaShimmer{
   0%{background-position:-200% 0}
   100%{background-position:200% 0}
 }
 .cta::after{
-  content:"";position:absolute;inset:0;border-radius:inherit;
-  background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.32) 50%,transparent 70%);
+  content:""; position:absolute; inset:0; border-radius:inherit;
+  background:linear-gradient(110deg, transparent 30%, rgba(255,255,255,.4) 50%, transparent 70%);
   background-size:200% 100%;
-  animation:shimmer 3.4s ease-in-out infinite;
+  animation:ctaShimmer 3s ease-in-out infinite;
   pointer-events:none;
   mix-blend-mode:overlay;
 }
-.cta{position:relative;overflow:hidden}
 
-@keyframes starTwinkle{
-  0%,100%{opacity:1;transform:scale(1)}
-  50%{opacity:.65;transform:scale(1.08)}
-}
-.stars .star-row{animation:starTwinkle 2.4s ease-in-out infinite}
-
-@keyframes pillarIcoBob{
-  0%,100%{transform:translateY(0)}
-  50%{transform:translateY(-3px)}
-}
-.pillar:hover .ico{animation:pillarIcoBob 1s ease-in-out infinite}
-
-@keyframes priceBump{
-  0%,100%{transform:scale(1)}
-  10%{transform:scale(1.04)}
-  20%{transform:scale(1)}
-}
-.price-block .now{animation:priceBump 4s ease-in-out infinite;transform-origin:center}
-
-@keyframes sealSpin{
-  0%{transform:rotate(-8deg) scale(1)}
-  50%{transform:rotate(-4deg) scale(1.04)}
-  100%{transform:rotate(-8deg) scale(1)}
-}
-.seal{animation:sealSpin 5s ease-in-out infinite}
-
-@keyframes shieldFloat{
-  0%,100%{transform:translateY(0) rotate(-2deg)}
-  50%{transform:translateY(-6px) rotate(2deg)}
-}
-.shield{animation:shieldFloat 4.5s ease-in-out infinite}
-
-/* hover effects nos cards de depoimento */
-.chat-card{transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s ease}
-.chat-card:hover{transform:translateY(-6px) scale(1.02);box-shadow:0 30px 60px -15px rgba(43,37,32,.3)}
-
-/* pain list items slide in */
-.pain-list li{transition:transform .25s ease,box-shadow .25s ease,background .2s ease}
-.pain-list li:hover{transform:translateX(4px);background:#fff}
-
-/* FAQ open animation */
-.faq-item[open] .answer{animation:faqOpen .35s ease-out}
-@keyframes faqOpen{
-  from{opacity:0;transform:translateY(-6px)}
-  to{opacity:1;transform:none}
+.cta-secondary{
+  background:linear-gradient(180deg, var(--accent) 0%, var(--accent-dark) 100%);
+  color:#fff;
+  box-shadow:0 14px 28px -10px rgba(63,198,255,.55), inset 0 -3px 0 rgba(0,0,0,.18), inset 0 1px 0 rgba(255,255,255,.3);
 }
 
-/* eyebrow sutil entrada */
-@keyframes eyebrowSlide{
-  from{opacity:0;transform:translateY(-4px)}
-  to{opacity:1;transform:none}
+.cta-micro{
+  margin-top:14px;
+  font-size:13px;
+  color:var(--muted);
+  display:flex; gap:12px; justify-content:center; flex-wrap:wrap;
+  align-items:center;
 }
-.reveal.in .eyebrow,.reveal.in.eyebrow{animation:eyebrowSlide .6s ease-out both}
+.cta-micro .dot{width:3px; height:3px; background:var(--muted); border-radius:50%; display:inline-block}
 
-/* respeita preferência */
-@media(prefers-reduced-motion:reduce){
-  .hero-mockup img,.cta,.cta::after,.stars .star-row,.price-block .now,.seal,.shield{animation:none}
+.pay-methods{
+  margin:18px auto 0;
+  max-width:380px;
+  opacity:.85;
 }
 
 /* ============================================================
-   COUNTDOWN BAR (topo)
+   COUNTDOWN BAR
    ============================================================ */
 .countdown-bar{
-  position:sticky;top:0;z-index:100;
-  background:linear-gradient(90deg,#A8632C 0%,#C97B3F 50%,#A8632C 100%);
-  color:#fff;
-  padding:10px 16px calc(10px + env(safe-area-inset-top,0px));
+  position:sticky; top:0; z-index:100;
+  background:linear-gradient(180deg, #15294f 0%, #0e2040 100%);
+  border-bottom:1px solid var(--line-2);
+  padding:14px 16px 16px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  font-family:var(--mont);
   text-align:center;
-  font-family:var(--sans);
-  font-size:14px;
-  line-height:1.3;
-  box-shadow:0 4px 12px rgba(43,37,32,.15);
-  display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;
+  box-shadow:0 4px 14px rgba(0,0,0,.25);
 }
-.countdown-bar .pulse{
-  width:8px;height:8px;border-radius:50%;background:#fff;
-  box-shadow:0 0 0 0 rgba(255,255,255,.7);
+.countdown-bar .label{
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:#ffd6a6;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.countdown-bar .label::before{
+  content:"";
+  width:8px; height:8px;
+  border-radius:50%;
+  background:#ff6b6b;
+  box-shadow:0 0 0 0 rgba(255,107,107,.6);
   animation:cdPulse 1.6s ease-out infinite;
-  flex-shrink:0;
 }
 @keyframes cdPulse{
-  0%{box-shadow:0 0 0 0 rgba(255,255,255,.7)}
-  70%{box-shadow:0 0 0 10px rgba(255,255,255,0)}
-  100%{box-shadow:0 0 0 0 rgba(255,255,255,0)}
+  0%{box-shadow:0 0 0 0 rgba(255,107,107,.6)}
+  70%{box-shadow:0 0 0 10px rgba(255,107,107,0)}
+  100%{box-shadow:0 0 0 0 rgba(255,107,107,0)}
 }
-.countdown-bar .label{font-weight:500;letter-spacing:.02em;text-transform:uppercase;font-size:12.5px;opacity:.95}
 .countdown-bar .timer{
-  font-family:var(--sans);
-  font-weight:700;
+  display:inline-flex;
+  gap:8px;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:6px;
+}
+.countdown-bar .timer .seg{
+  background:linear-gradient(180deg, #1a3157 0%, #0a1628 100%);
+  border:1px solid var(--line-2);
+  border-radius:10px;
+  padding:8px 12px 14px;
+  font-weight:800;
+  font-size:20px;
+  color:#fff;
   font-variant-numeric:tabular-nums;
+  min-width:54px;
+  text-align:center;
+  position:relative;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.08), 0 2px 6px rgba(0,0,0,.3);
+}
+.countdown-bar .timer .seg::after{
+  content:attr(data-label);
+  position:absolute;
+  bottom:3px; left:50%; transform:translateX(-50%);
+  font-size:9px;
+  color:var(--muted);
+  font-weight:600;
+  letter-spacing:.14em;
+}
+.countdown-bar .timer .sep{
+  color:var(--accent);
+  font-weight:800;
+  font-size:18px;
+  align-self:flex-start;
+  margin-top:10px;
+}
+.countdown-bar .bar-cta{
+  background:linear-gradient(180deg, #43ff8b 0%, #2bd96b 100%);
+  color:#0a2818;
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  padding:12px 26px;
+  border-radius:10px;
+  text-decoration:none;
+  white-space:nowrap;
+  transition:transform .15s ease, filter .2s;
+  box-shadow:0 8px 18px -6px rgba(43,217,107,.5), inset 0 -2px 0 rgba(0,0,0,.18), inset 0 1px 0 rgba(255,255,255,.4);
+}
+.countdown-bar .bar-cta:hover{filter:brightness(1.08); transform:translateY(-1px)}
+@media(max-width:560px){
+  .countdown-bar{padding:12px 12px 14px}
+  .countdown-bar .label{font-size:11px; letter-spacing:.18em}
+  .countdown-bar .timer .seg{padding:7px 10px 13px; font-size:17px; min-width:46px}
+  .countdown-bar .bar-cta{font-size:12px; padding:11px 22px}
+  .countdown-bar .label{font-size:10.5px; letter-spacing:.14em}
+  .countdown-bar .timer .seg{padding:5px 8px; font-size:13px; min-width:36px}
+  .countdown-bar .bar-cta{font-size:10.5px; padding:8px 12px}
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{
+  padding:48px 0 64px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+.hero::before{
+  content:"";
+  position:absolute; inset:0;
+  background:
+    radial-gradient(600px 400px at 50% 20%, rgba(63,198,255,.18), transparent 60%);
+  pointer-events:none;
+}
+.hero .container{position:relative; z-index:1}
+.hero .eyebrow{
+  display:inline-block;
+  font-family:var(--mont);
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--accent);
+  background:rgba(63,198,255,.10);
+  border:1px solid rgba(63,198,255,.25);
+  padding:7px 14px;
+  border-radius:999px;
+  margin-bottom:18px;
+}
+.hero h1{
+  font-family:var(--serif);
+  font-size:clamp(30px,6vw,50px);
+  margin-bottom:8px;
+}
+.hero .sub{
+  font-family:var(--serif);
+  font-size:clamp(17px,2.4vw,22px);
+  color:var(--ink-2);
+  max-width:760px;
+  margin:0 auto 0;
+  line-height:1.4;
+}
+.hero .watch-label{
+  font-size:14px;
+  color:var(--ink-2);
+  margin-bottom:18px;
+}
+.hero .watch-label .accent{font-weight:600}
+
+.hero-mockup-wrap{
+  margin:-40px auto -16px;
+  max-width:600px;
+  position:relative;
+}
+.hero-mockup-wrap img{
+  width:100%;
+  height:auto;
+  filter:drop-shadow(0 30px 50px rgba(0,0,0,.5));
+  animation:floatY 6s ease-in-out infinite;
+}
+@keyframes floatY{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-12px)}
+}
+
+.hero .desc{
+  font-size:15.5px;
+  line-height:1.7;
+  color:var(--ink-2);
+  max-width:820px;
+  margin:0 auto 28px;
+  text-align:center;
+}
+@media(min-width:768px){.hero .desc{font-size:16.5px}}
+
+.hero .invite{
+  font-family:var(--serif);
+  font-size:clamp(18px,2.5vw,24px);
+  color:var(--ink);
+  margin:8px 0 22px;
+}
+.hero .stars-row{
+  margin-top:22px;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  font-size:13.5px;
+  color:var(--ink-2);
+  flex-wrap:wrap;
+  justify-content:center;
+}
+.hero .stars-row .stars{color:var(--amber); letter-spacing:1px; font-size:15px}
+
+/* ============================================================
+   SECTION HEADS
+   ============================================================ */
+.section-eyebrow{
+  display:inline-block;
+  font-family:var(--mont);
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--accent);
+  background:rgba(63,198,255,.10);
+  border:1px solid rgba(63,198,255,.25);
+  padding:7px 14px;
+  border-radius:999px;
+  margin-bottom:18px;
+}
+.section-head{text-align:center; max-width:820px; margin:0 auto 40px}
+.section-head h2{margin-bottom:14px}
+.section-head .lead{color:var(--ink-2); font-size:17px; max-width:680px; margin:0 auto}
+
+/* ============================================================
+   WHAT IS — 3 BENEFITS
+   ============================================================ */
+.what-is{
+  background:linear-gradient(180deg, transparent 0%, rgba(63,198,255,.04) 50%, transparent 100%);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.benefits{
+  display:grid;
+  gap:22px;
+  grid-template-columns:1fr;
+  margin-top:38px;
+}
+@media(min-width:768px){.benefits{grid-template-columns:repeat(3,1fr); gap:24px}}
+.benefit{
+  background:linear-gradient(180deg, rgba(26,49,87,.6) 0%, rgba(14,32,64,.6) 100%);
+  border:1px solid var(--line-2);
+  border-radius:var(--r-lg);
+  padding:32px 24px 28px;
+  text-align:center;
+  transition:transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+  backdrop-filter:blur(10px);
+}
+.benefit:hover{transform:translateY(-4px); border-color:rgba(63,198,255,.4); box-shadow:0 20px 40px -15px rgba(63,198,255,.25)}
+.benefit .ico{
+  width:64px; height:64px;
+  margin:0 auto 18px;
+  background:linear-gradient(135deg, rgba(63,198,255,.18) 0%, rgba(63,198,255,.06) 100%);
+  border:1px solid rgba(63,198,255,.3);
+  border-radius:18px;
+  display:flex; align-items:center; justify-content:center;
+  color:var(--accent);
+  transition:transform .3s ease;
+}
+.benefit:hover .ico{transform:scale(1.08) rotate(-3deg)}
+.benefit h3{font-family:var(--serif); margin-bottom:10px; font-size:19px}
+.benefit p{font-size:15px; color:var(--ink-2); margin:0}
+
+/* ============================================================
+   TESTIMONIALS (MARQUEE)
+   ============================================================ */
+.testimonials{overflow:hidden}
+.testi-marquee{
+  width:100%;
+  overflow:hidden;
+  margin:32px 0 28px;
+  -webkit-mask-image:linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+  mask-image:linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+}
+.testi-track{
+  display:flex;
+  gap:18px;
+  width:max-content;
+  animation:marqueeScroll 50s linear infinite;
+}
+.testi-track:hover{animation-play-state:paused}
+@keyframes marqueeScroll{
+  from{transform:translateX(0)}
+  to{transform:translateX(-50%)}
+}
+.testi-card{
+  flex:0 0 260px;
+  aspect-ratio:9/16.5;
+  background:#0a0a0a;
+  border-radius:34px;
+  padding:6px;
+  box-shadow:var(--shadow-lg), 0 0 0 1px rgba(255,255,255,.06) inset;
+  position:relative;
+  overflow:hidden;
+}
+.testi-card img{
+  width:100%; height:100%;
+  object-fit:cover;
+  object-position:top center;
+  border-radius:28px;
+  background:#ECE2CF;
+  display:block;
+}
+.testi-card .name{display:none}
+.testi-close{
+  text-align:center;
+  font-family:var(--serif);
+  font-size:clamp(18px,2.4vw,22px);
+  color:var(--ink);
+  margin:24px auto 24px;
+  max-width:760px;
+}
+.testi-disclaimer{
+  text-align:center;
+  font-size:12px;
+  color:var(--muted);
+  max-width:600px;
+  margin:0 auto;
+  padding:0 20px;
+}
+
+/* ============================================================
+   FOR WHOM (6 PROFILES)
+   ============================================================ */
+.for-whom{
+  background:
+    radial-gradient(800px 500px at 50% 0%, rgba(63,198,255,.07), transparent 60%);
+}
+.profiles{
+  display:grid;
+  gap:18px;
+  grid-template-columns:1fr;
+  margin-top:24px;
+}
+@media(min-width:640px){.profiles{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1024px){.profiles{grid-template-columns:repeat(3,1fr); gap:22px}}
+.profile{
+  background:linear-gradient(180deg, rgba(26,49,87,.55) 0%, rgba(14,32,64,.55) 100%);
+  border:1px solid var(--line-2);
+  border-radius:var(--r-lg);
+  padding:28px 22px;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  align-items:center;
+  text-align:center;
+  transition:transform .3s, border-color .3s;
+}
+.profile:hover{transform:translateY(-3px); border-color:rgba(63,198,255,.35)}
+.profile .ck{
+  flex-shrink:0;
+  width:42px; height:42px;
+  border-radius:50%;
+  background:linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+  color:#0a1628;
+  display:flex; align-items:center; justify-content:center;
+  font-weight:800;
+  font-size:18px;
+  box-shadow:0 6px 14px -4px rgba(63,198,255,.5);
+}
+.profile h3{font-family:var(--serif); font-size:17px; margin-bottom:6px; line-height:1.25; text-align:center}
+.profile p{font-size:14.5px; color:var(--ink-2); margin:0; line-height:1.55; text-align:center}
+
+/* ============================================================
+   MODULES
+   ============================================================ */
+.modules{position:relative}
+.modules-intro{
+  text-align:center;
+  max-width:780px;
+  margin:0 auto 28px;
+  color:var(--ink-2);
+  font-size:15.5px;
+  display:flex;
+  gap:12px;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  background:rgba(63,198,255,.06);
+  border:1px solid rgba(63,198,255,.18);
+  border-radius:var(--r-md);
+  padding:20px 22px;
+}
+.modules-intro .ck{
+  flex-shrink:0;
+  color:var(--accent);
+}
+.modules-intro p{margin:0; text-align:center; font-size:15px}
+.mod-grid{
+  display:grid;
+  gap:22px;
+  grid-template-columns:repeat(2,1fr);
+}
+@media(min-width:768px){.mod-grid{grid-template-columns:repeat(4,1fr); gap:24px}}
+.mod-card{
+  background:linear-gradient(180deg, rgba(26,49,87,.6) 0%, rgba(14,32,64,.6) 100%);
+  border:1px solid var(--line-2);
+  border-radius:var(--r-lg);
+  overflow:hidden;
+  transition:transform .35s cubic-bezier(.2,.8,.2,1), border-color .3s, box-shadow .35s;
+  position:relative;
+}
+.mod-card:hover{transform:translateY(-6px); border-color:rgba(63,198,255,.5); box-shadow:0 24px 48px -15px rgba(63,198,255,.25)}
+.mod-card .art{
+  width:100%;
+  aspect-ratio:3/4.2;
+  background:linear-gradient(135deg, #1a3157 0%, #0e2040 100%);
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+/* capa do módulo */
+.mod-card .art{
+  background:#f5ede0;
+}
+.mod-card .art .mod-img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  transition:transform .5s ease;
+}
+.mod-card:hover .art .mod-img{transform:scale(1.04)}
+.mod-card .body{
+  padding:18px 16px 20px;
+  text-align:center;
+}
+.mod-card .body h3{
+  font-family:var(--serif);
+  font-size:15.5px;
+  margin-bottom:8px;
+  color:var(--ink);
+  line-height:1.3;
+}
+.mod-card .body p{
+  font-size:13.5px;
+  color:var(--ink-2);
+  line-height:1.5;
+  margin:0;
+}
+.modules-foot{
+  text-align:center;
+  margin-top:30px;
+  font-size:15px;
+  color:var(--ink-2);
+}
+
+/* ============================================================
+   ACCESS BLOCK
+   ============================================================ */
+.access{
+  background:linear-gradient(180deg, transparent 0%, rgba(63,198,255,.04) 50%, transparent 100%);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  padding:48px 0 0 !important;
+}
+.access-grid{
+  display:flex;
+  flex-direction:column;
+  gap:0;
+  align-items:center;
+  text-align:center;
+  max-width:720px;
+  margin:0 auto;
+}
+.access-text > p:last-of-type{margin-bottom:0}
+.access-img{margin-top:-28px; margin-bottom:-40px}
+.access-img img{display:block}
+.access-text{text-align:center; max-width:620px}
+.access-text h2 .accent{font-style:italic}
+.access-text h2{text-align:center}
+.access-text p{font-size:15.5px; line-height:1.7; color:var(--ink-2); text-align:center; max-width:560px; margin-left:auto; margin-right:auto}
+.access-text p strong{color:#fff}
+.access-img{
+  position:relative;
+  text-align:center;
+}
+.access-img img{
+  max-width:480px;
+  width:100%;
+  margin:0 auto;
+  filter:drop-shadow(0 20px 40px rgba(0,0,0,.4));
+}
+
+/* ============================================================
+   MARQUEE TEXT BANNER
+   ============================================================ */
+.marquee-banner{
+  background:linear-gradient(90deg, var(--accent-dark) 0%, var(--accent) 50%, var(--accent-dark) 100%);
+  padding:18px 0;
+  overflow:hidden;
+  position:relative;
+  border-top:1px solid rgba(255,255,255,.2);
+  border-bottom:1px solid rgba(255,255,255,.2);
+}
+.marquee-banner-track{
+  display:inline-block;
+  white-space:nowrap;
+  font-family:var(--serif);
+  font-size:clamp(18px,2.4vw,24px);
+  color:#0a1628;
+  font-weight:400;
+  animation:marqueeText 35s linear infinite;
+}
+@keyframes marqueeText{
+  0%{transform:translateX(0)}
+  100%{transform:translateX(-50%)}
+}
+.marquee-banner-track span{padding:0 16px; opacity:.9}
+.marquee-banner-track .sep{color:rgba(10,22,40,.4); padding:0 6px}
+
+/* ============================================================
+   BONUS
+   ============================================================ */
+.bonus{
+  background:
+    radial-gradient(800px 500px at 50% 0%, rgba(255,181,71,.10), transparent 60%);
+}
+.bonus-grid{
+  display:grid;
+  gap:24px;
+  grid-template-columns:1fr;
+  margin-top:36px;
+}
+@media(min-width:768px){.bonus-grid{grid-template-columns:repeat(3,1fr); gap:26px}}
+.bonus-card{
+  background:linear-gradient(180deg, rgba(26,49,87,.7) 0%, rgba(14,32,64,.7) 100%);
+  border:1.5px dashed rgba(255,181,71,.45);
+  border-radius:var(--r-lg);
+  padding:36px 24px 28px;
+  text-align:center;
+  position:relative;
+  transition:transform .35s cubic-bezier(.2,.8,.2,1), border-color .3s, box-shadow .35s;
+}
+.bonus-card:hover{
+  transform:translateY(-5px);
+  border-color:var(--amber);
+  box-shadow:0 24px 48px -15px rgba(255,181,71,.3);
+}
+.bonus-card .gift{
+  font-size:54px;
+  margin-bottom:14px;
+  display:inline-block;
+  filter:drop-shadow(0 8px 14px rgba(255,181,71,.4));
+  transition:transform .35s ease;
+}
+.bonus-card:hover .gift{transform:scale(1.1) rotate(-6deg)}
+.bonus-card .tag{
+  display:inline-block;
+  font-family:var(--mont);
+  font-size:10.5px;
+  font-weight:800;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--amber);
+  background:rgba(255,181,71,.10);
+  border:1px solid rgba(255,181,71,.3);
+  padding:5px 12px;
+  border-radius:999px;
+  margin-bottom:14px;
+}
+.bonus-card h3{
+  font-family:var(--serif);
+  font-size:18px;
+  margin-bottom:14px;
+  line-height:1.3;
+}
+.bonus-card .desc{
+  font-size:14.5px;
+  color:var(--ink-2);
+  line-height:1.55;
+  margin-bottom:18px;
+  min-height:60px;
+}
+.bonus-card .price-row{
+  border-top:1px dashed var(--line-2);
+  padding-top:14px;
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  align-items:center;
+  font-size:13.5px;
+  color:var(--ink-2);
+}
+.bonus-card .price-row .val{
+  color:var(--muted);
+}
+.bonus-card .price-row .val s{color:var(--danger); font-weight:700}
+.bonus-card .price-row .free{
+  display:inline-flex; align-items:center; gap:8px;
+  color:#fff;
+  font-weight:700;
+}
+.bonus-card .price-row .free strong{color:var(--success); font-size:16px}
+.bonus-others{
+  text-align:center;
+  margin-top:38px;
+  font-family:var(--serif);
+  font-size:clamp(20px,2.6vw,26px);
+  color:var(--ink);
+}
+.bonus-others .accent{font-style:italic}
+
+/* ============================================================
+   PRICE OFFER
+   ============================================================ */
+.offer{
+  background:
+    radial-gradient(900px 500px at 50% -10%, rgba(63,198,255,.18), transparent 60%);
+}
+.offer-card{
+  max-width:640px;
+  margin:0 auto;
+  background:linear-gradient(180deg, #15294f 0%, #0e2040 100%);
+  border:1px solid rgba(63,198,255,.3);
+  border-radius:var(--r-xl);
+  padding:38px 28px 32px;
+  box-shadow:0 30px 60px -20px rgba(0,0,0,.55), 0 0 0 1px rgba(63,198,255,.10);
+  position:relative;
+  overflow:hidden;
+}
+.offer-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:radial-gradient(400px 200px at 50% 0%, rgba(63,198,255,.15), transparent 70%);
+  pointer-events:none;
+}
+.offer-card h2{
+  text-align:center;
+  font-family:var(--serif);
+  font-size:clamp(22px,3.4vw,28px);
+  line-height:1.3;
+  margin-bottom:8px;
+}
+.offer-card .promo-note{
+  text-align:center;
+  font-size:14px;
+  color:var(--amber);
+  font-weight:600;
+  margin-bottom:24px;
+}
+.offer-card .access-label{
+  font-family:var(--serif);
   font-size:17px;
-  letter-spacing:.04em;
-  background:rgba(0,0,0,.18);
-  padding:4px 10px;
-  border-radius:8px;
-  border:1px solid rgba(255,255,255,.18);
+  color:var(--ink);
+  margin-bottom:14px;
+  text-align:center;
 }
-@media(min-width:768px){
-  .countdown-bar{font-size:15px;padding:12px 20px}
-  .countdown-bar .label{font-size:13.5px}
-  .countdown-bar .timer{font-size:18px;padding:5px 12px}
+.offer-list{
+  list-style:none;
+  padding:0;
+  margin:0 0 22px;
+  display:grid;
+  gap:10px;
+  max-width:420px;
+  margin-left:auto;
+  margin-right:auto;
 }
-.countdown-bar.expired .timer{background:rgba(0,0,0,.28)}
-.countdown-bar.expired .pulse{animation:none;background:#ffd6b0}
+.offer-list li{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  font-size:15px;
+  color:var(--ink-2);
+  padding:8px 0;
+  justify-content:flex-start;
+  text-align:left;
+}
+.offer-list li .ck{
+  width:22px; height:22px;
+  flex-shrink:0;
+  border-radius:50%;
+  background:var(--accent);
+  color:#0a1628;
+  display:flex; align-items:center; justify-content:center;
+  font-weight:800;
+  font-size:13px;
+}
+.price-block{
+  text-align:center;
+  border-top:1px dashed var(--line-2);
+  padding-top:22px;
+  position:relative;
+  z-index:1;
+}
+.price-block .de{
+  font-size:15px;
+  color:var(--muted);
+  margin-bottom:4px;
+}
+.price-block .de s{color:var(--muted)}
+.price-block .por{
+  font-family:var(--serif);
+  font-size:15px;
+  color:var(--ink-2);
+  margin-bottom:4px;
+}
+.price-block .parcel{
+  font-family:var(--serif);
+  font-size:18px;
+  color:var(--ink);
+  margin-bottom:4px;
+}
+.price-block .now{
+  font-family:var(--serif);
+  font-size:clamp(54px,10vw,72px);
+  color:var(--accent);
+  font-weight:400;
+  line-height:1;
+  margin:6px 0;
+  letter-spacing:-0.02em;
+}
+.price-block .now small{font-size:.45em; vertical-align:top; margin-right:6px; color:var(--accent-2)}
+.price-block .pix-note{
+  font-size:14.5px;
+  color:var(--ink-2);
+  margin-bottom:22px;
+}
+.price-block .pix-note strong{color:#fff}
+.price-block .investment-line{
+  font-size:14px;
+  color:var(--muted);
+  margin-top:14px;
+  font-style:italic;
+}
+
+/* ============================================================
+   GUARANTEE
+   ============================================================ */
+.guarantee-section{
+  background:linear-gradient(180deg, transparent 0%, rgba(63,198,255,.05) 50%, transparent 100%);
+}
+.guarantee-card{
+  max-width:880px;
+  margin:0 auto;
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+  align-items:center;
+  text-align:center;
+  background:linear-gradient(180deg, rgba(26,49,87,.55) 0%, rgba(14,32,64,.55) 100%);
+  border:1px solid var(--line-2);
+  border-radius:var(--r-xl);
+  padding:36px 28px;
+}
+.guarantee-text h2{
+  font-family:var(--serif);
+  text-align:center;
+}
+.guarantee-text p{
+  font-size:15.5px;
+  color:var(--ink-2);
+  line-height:1.65;
+  margin:0;
+  text-align:center;
+  max-width:620px;
+  margin:0 auto;
+}
+.guarantee-text p strong{color:#fff}
+.guarantee-seal{
+  width:160px; height:160px;
+  margin:0 auto;
+  position:relative;
+  background:radial-gradient(circle at 30% 30%, #ffd76b 0%, #ffb547 50%, #c97f1c 100%);
+  border-radius:50%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  color:#0a1628;
+  font-family:var(--serif);
+  box-shadow:0 14px 30px -10px rgba(255,181,71,.5), inset 0 -6px 10px rgba(0,0,0,.18), inset 0 4px 10px rgba(255,255,255,.4);
+  animation:sealFloat 4.5s ease-in-out infinite;
+}
+@keyframes sealFloat{
+  0%,100%{transform:translateY(0) rotate(-3deg)}
+  50%{transform:translateY(-6px) rotate(3deg)}
+}
+.guarantee-seal::before{
+  content:"";
+  position:absolute;
+  inset:10px;
+  border:2px dashed rgba(0,0,0,.28);
+  border-radius:50%;
+}
+.guarantee-seal .n{font-size:54px; font-weight:400; line-height:1}
+.guarantee-seal .d{
+  font-family:var(--mont);
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  margin-top:4px;
+}
+.guarantee-seal .text{
+  font-family:var(--mont);
+  font-size:9.5px;
+  font-weight:700;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  margin-top:6px;
+}
+/* ============================================================
+   FAQ
+   ============================================================ */
+.faq-list{max-width:820px; margin:24px auto 28px}
+.faq-item{
+  background:linear-gradient(180deg, rgba(26,49,87,.55) 0%, rgba(14,32,64,.55) 100%);
+  border:1px solid var(--line-2);
+  border-radius:var(--r-md);
+  margin-bottom:12px;
+  overflow:hidden;
+  transition:border-color .25s ease;
+}
+.faq-item[open]{border-color:rgba(63,198,255,.4)}
+.faq-item summary{
+  list-style:none;
+  cursor:pointer;
+  padding:20px 22px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:16px;
+  font-family:var(--serif);
+  font-size:16.5px;
+  color:var(--ink);
+  line-height:1.35;
+}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{
+  content:"+";
+  font-family:var(--mont);
+  font-weight:400;
+  font-size:26px;
+  color:var(--accent);
+  transition:transform .25s ease;
+  flex-shrink:0;
+}
+.faq-item[open] summary::after{transform:rotate(45deg)}
+.faq-item .answer{
+  padding:0 22px 20px;
+  color:var(--ink-2);
+  font-size:14.5px;
+  line-height:1.65;
+}
+.faq-item[open] .answer{animation:faqOpen .3s ease-out}
+@keyframes faqOpen{
+  from{opacity:0; transform:translateY(-6px)}
+  to{opacity:1; transform:none}
+}
+
+/* ============================================================
+   FINAL CTA / RATING / SECURE
+   ============================================================ */
+.final-cta{
+  text-align:center;
+  border-top:1px solid var(--line);
+}
+.rating{
+  display:flex;
+  justify-content:center;
+  gap:4px;
+  margin-bottom:16px;
+}
+.rating .star{color:var(--amber); font-size:28px}
+.secure-img{
+  margin:18px auto;
+  max-width:680px;
+  opacity:.7;
+}
+.secure-text{
+  max-width:760px;
+  margin:0 auto 24px;
+  font-size:12.5px;
+  color:var(--muted);
+  line-height:1.6;
+}
+.back-top{
+  display:inline-flex;
+  flex-direction:column;
+  align-items:center;
+  gap:6px;
+  margin-top:18px;
+  text-decoration:none;
+  color:var(--muted);
+  font-family:var(--mont);
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  transition:color .2s;
+}
+.back-top:hover{color:var(--accent)}
+.back-top .arr{
+  width:42px; height:42px;
+  border-radius:50%;
+  background:rgba(63,198,255,.10);
+  border:1px solid rgba(63,198,255,.3);
+  display:flex; align-items:center; justify-content:center;
+  color:var(--accent);
+  transition:transform .2s, background .2s;
+}
+.back-top:hover .arr{transform:translateY(-3px); background:rgba(63,198,255,.18)}
+
+/* ============================================================
+   FOOTER LEGAL
+   ============================================================ */
+.legal{
+  background:#070e1c;
+  padding:32px 0 80px;
+  border-top:1px solid var(--line);
+  font-size:12.5px;
+  color:#7185a4;
+  line-height:1.6;
+}
+.legal .container{max-width:880px}
+.legal-top{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:18px;
+  margin-bottom:18px;
+  text-align:center;
+}
+.legal h4{color:#fff; font-family:var(--serif); font-size:17px; margin-bottom:4px}
+.legal a{color:#a6b8d4}
+.legal a:hover{color:#fff}
+.legal-links{display:flex; flex-wrap:wrap; gap:6px 18px; justify-content:center}
+
+/* ============================================================
+   STICKY CTA (mobile)
+   ============================================================ */
+.sticky-cta{
+  position:fixed;
+  left:0; right:0; bottom:0;
+  background:linear-gradient(180deg, #15294f 0%, #0a1628 100%);
+  border-top:1px solid rgba(63,198,255,.3);
+  padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+  display:flex;
+  align-items:center;
+  gap:12px;
+  z-index:90;
+  transform:translateY(120%);
+  transition:transform .35s cubic-bezier(.4,0,.2,1);
+  box-shadow:0 -10px 24px rgba(0,0,0,.4);
+}
+.sticky-cta.show{transform:translateY(0)}
+.sticky-cta .meta{flex:1; min-width:0}
+.sticky-cta .meta .l{font-size:10px; color:var(--muted); text-transform:uppercase; letter-spacing:.14em; font-weight:700}
+.sticky-cta .meta .p{font-family:var(--serif); font-weight:400; font-size:17px; color:#fff}
+.sticky-cta .meta .p s{color:var(--muted); font-size:13px; margin-right:6px}
+.sticky-cta .meta .p .accent{color:var(--accent)}
+.sticky-cta .cta{width:auto; min-width:155px; padding:14px 16px; font-size:13px; border-radius:12px; animation:none}
+.sticky-cta .cta::after{display:none}
+@media(min-width:900px){.sticky-cta{display:none}}
+@media(max-width:899px){body.has-sticky{padding-bottom:80px}}
+
+/* ============================================================
+   WHATSAPP FLOAT
+   ============================================================ */
+.whatsapp-float{
+  position:fixed;
+  right:18px;
+  bottom:90px;
+  width:56px;
+  height:56px;
+  background:#25d366;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  z-index:91;
+  box-shadow:0 10px 24px rgba(0,0,0,.35), 0 0 0 0 rgba(37,211,102,.6);
+  animation:waPulse 2s ease-in-out infinite;
+  text-decoration:none;
+  transition:transform .2s;
+}
+.whatsapp-float:hover{transform:scale(1.08)}
+@keyframes waPulse{
+  0%,100%{box-shadow:0 10px 24px rgba(0,0,0,.35), 0 0 0 0 rgba(37,211,102,.5)}
+  50%{box-shadow:0 10px 24px rgba(0,0,0,.35), 0 0 0 12px rgba(37,211,102,0)}
+}
+@media(min-width:900px){.whatsapp-float{bottom:24px}}
+
+/* ============================================================
+   REVEAL ANIMATIONS
+   ============================================================ */
+.reveal{
+  opacity:0;
+  transform:translateY(20px);
+  transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1);
+  transition-delay:var(--rd,0s);
+}
+.reveal.in{opacity:1; transform:none}
+
+@media(prefers-reduced-motion:reduce){
+  .cta, .hero-mockup-wrap img, .guarantee-seal, .marquee-banner-track, .testi-track, .whatsapp-float{
+    animation:none !important;
+  }
+}
 </style>
 </head>
 <body>
 
-<div class="countdown-bar" id="countdownBar" role="status" aria-live="polite">
-  <span class="pulse" aria-hidden="true"></span>
-  <span class="label">Promoção termina em:</span>
-  <span class="timer" id="countdownTimer">01:00:00</span>
+<!-- ============================================================
+     COUNTDOWN BAR
+     ============================================================ -->
+<div class="countdown-bar" id="cdBar" role="status" aria-live="polite">
+  <span class="label">A promoção termina em:</span>
+  <div class="timer">
+    <span class="seg" id="cdH" data-label="HORAS">18</span>
+    <span class="sep">:</span>
+    <span class="seg" id="cdM" data-label="MIN">29</span>
+    <span class="sep">:</span>
+    <span class="seg" id="cdS" data-label="SEG">24</span>
+  </div>
+  <a href="https://pay.kiwify.com.br/oMXt839" target="_blank" rel="noopener" class="bar-cta">Quero fazer parte →</a>
 </div>
 
-<header class="hero">
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<header class="hero" id="topo">
   <div class="container">
-    <div class="hero-grid">
-      <div class="hero-text reveal">
-        <span class="eyebrow">Método para Pais de Pet</span>
-        <h1>Cão Mais Calmo<br/>em <span class="accent">14 dias</span>.</h1>
-        <p class="hero-sub">O método caseiro que reabilita a agressividade do seu cachorro <strong>sem adestrador particular</strong>, <strong>sem medicação</strong> e sem precisar entregar seu melhor amigo.</p>
-        <a class="cta" href="#oferta">Quero reabilitar meu cão <span class="arrow">→</span></a>
-        <div class="cta-micro">
-          <span>Acesso imediato</span><span class="dot"></span>
-          <span>Garantia de 7 dias</span><span class="dot"></span>
-          <span>Pagamento único</span>
-        </div>
-        <div class="stars">
-          <span class="star-row" aria-hidden="true">★★★★★</span>
-          <span>Mais de <strong>2.847 pais de pet</strong> aplicando o método</span>
-        </div>
-      </div>
+    <div class="reveal in">
+      <span class="eyebrow">Método para pais de pet</span>
+      <h1>Cão Mais Calmo em <span class="accent" style="font-style:italic">14 dias</span></h1>
+      <p class="sub">Reabilite a agressividade do seu cachorro<br>e devolva a paz para dentro de casa.</p>
+    </div>
 
-      <div class="hero-mockup reveal">
-        <img src="assets/hero-mockup.png" alt="Ebook Cão Calmo em até 14 dias com bônus em e-books de alimentação, adestramento e primeiros socorros" />
-      </div>
+    <div class="hero-mockup-wrap reveal in">
+      <img src="assets/hero-mockup.png" alt="Ebook Cão Calmo em até 14 dias com bônus de Alimentação Natural, Adestramento em Casa e Primeiros Socorros Pet">
+    </div>
+
+    <p class="desc reveal in">
+      Este método caseiro com <span class="accent"><strong>acesso vitalício</strong></span> vai te ensinar a 
+      <span class="accent"><strong>identificar a origem real</strong></span> da agressividade do seu cão, 
+      <span class="accent"><strong>parar os episódios de mordida</strong></span> ainda essa semana e aplicar o 
+      <span class="accent"><strong>protocolo dia a dia de dessensibilização</strong></span> no seu dia a dia — 
+      <span class="accent"><strong>sem adestrador particular</strong></span>, 
+      <span class="accent"><strong>sem medicação</strong></span> e 
+      <span class="accent"><strong>sem precisar entregar seu melhor amigo</strong></span>. 
+      Módulos específicos cobrem situações temidas como 
+      <span class="accent"><strong>visitas em casa</strong></span>, 
+      <span class="accent"><strong>crianças</strong></span>, 
+      <span class="accent"><strong>passeio na rua</strong></span> e 
+      <span class="accent"><strong>entregadores</strong></span>. E muito mais!!!
+    </p>
+
+    <p class="invite reveal in">Faça parte dessa transformação hoje mesmo.</p>
+
+    <a class="cta" href="https://pay.kiwify.com.br/oMXt839" target="_blank" rel="noopener">
+      Quero reabilitar meu cão <span class="arrow">→</span>
+    </a>
+
+    <div class="cta-micro">
+      <span>Acesso imediato</span><span class="dot"></span>
+      <span>Garantia de 7 dias</span><span class="dot"></span>
+      <span>Pagamento único</span>
+    </div>
+
+    <div class="stars-row reveal in">
+      <span class="stars">★★★★★</span>
+      <span>Mais de <strong style="color:#fff">2.847 pais de pet</strong> aplicando o método</span>
     </div>
   </div>
 </header>
 
-<section class="pain">
+<!-- ============================================================
+     WHAT IS — 3 BENEFITS
+     ============================================================ -->
+<section class="what-is">
   <div class="container">
-    <div class="section-head reveal">
-      <h2>Se você chegou até aqui, provavelmente já passou por isso:</h2>
+    <div class="section-head reveal in">
+      <h2>O que é o <span class="accent" style="font-style:italic">Cão Mais Calmo em 14 Dias</span>?</h2>
+      <p class="lead">Construa um cão equilibrado. Reaproxime sua família. Volte a viver em paz dentro da própria casa.</p>
+      <p class="lead" style="margin-top:14px">Aprenda a identificar gatilhos, neutralizar episódios de agressividade e construir confiança — tudo dentro de casa, no seu ritmo, sem método ultrapassado.</p>
     </div>
-    <ul class="pain-list reveal">
-      <li><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M8 14c1-1.2 2.5-2 4-2s3 .8 4 2"/><circle cx="9" cy="10" r=".8" fill="currentColor"/><circle cx="15" cy="10" r=".8" fill="currentColor"/></svg></span> Seu cão rosnou ou mordeu alguém da sua família.</li>
-      <li><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 19h16M6 19V9l6-4 6 4v10"/><path d="M10 19v-5h4v5"/></svg></span> Visitas pararam de ir na sua casa.</li>
-      <li><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-4.35-7-10a4 4 0 0 1 7-2.65A4 4 0 0 1 19 11c0 5.65-7 10-7 10z"/><path d="M4 4l16 16"/></svg></span> Seu parceiro ou parceira deu um ultimato.</li>
-      <li><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 9h18M8 14h.01M12 14h.01"/></svg></span> Vizinho ou condomínio já reclamou.</li>
-      <li><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span> Você gastou em adestrador, ração especial, coleira — e nada funcionou.</li>
-      <li><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M9 10h.01M15 10h.01M9 16c1-1 2-1.5 3-1.5s2 .5 3 1.5"/></svg></span> À noite você se pergunta: <em>"será que vou ter que entregar ele?"</em></li>
-    </ul>
-    <p class="pain-close reveal">Eu sei o quanto dói pensar nisso.<br/>E sei também que existe um caminho que ninguém te mostrou.</p>
+
+    <div class="benefits">
+      <article class="benefit reveal" style="--rd:0s">
+        <div class="ico">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L4 6v6c0 5 3.5 9.5 8 10 4.5-.5 8-5 8-10V6l-8-4z"/>
+            <path d="M9 12l2 2 4-4"/>
+          </svg>
+        </div>
+        <h3>Pare os episódios de mordida e rosnado:</h3>
+        <p>Aplique o protocolo de contenção imediata e neutralize a agressividade ainda essa semana, sem coleira de enforcamento e sem castigo.</p>
+      </article>
+
+      <article class="benefit reveal" style="--rd:.08s">
+        <div class="ico">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="7"/>
+            <path d="M21 21l-4.3-4.3"/>
+            <path d="M11 7v4l3 2"/>
+          </svg>
+        </div>
+        <h3>Construa um cão confiante e equilibrado:</h3>
+        <p>Aprenda a aplicar exercícios diários de dessensibilização que transformam medo em segurança — em até 14 dias, sem precisar entregar seu melhor amigo.</p>
+      </article>
+
+      <article class="benefit reveal" style="--rd:.16s">
+        <div class="ico">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 11h18M5 11V8a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v3M5 11v6a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3v-6"/>
+            <circle cx="9" cy="15" r="1"/>
+            <circle cx="15" cy="15" r="1"/>
+          </svg>
+        </div>
+        <h3>Volte a viver em paz dentro de casa:</h3>
+        <p>Receba visitas, passeie na rua, lide com crianças e entregadores — com protocolos específicos para cada uma das situações que hoje te tiram o sono.</p>
+      </article>
+    </div>
   </div>
 </section>
 
-<section class="why">
+<!-- ============================================================
+     TESTIMONIALS
+     ============================================================ -->
+<section class="testimonials">
   <div class="container">
-    <div class="why-card reveal">
-      <span class="eyebrow" style="display:block;margin:0 auto 14px;width:max-content;">Por que isso acontece</span>
-      <h2>A agressividade do seu cão <em>não é culpa sua</em> — mas a solução está nas suas mãos.</h2>
-      <p>Cachorros agressivos não nascem agressivos. Eles aprendem a reagir assim por uma combinação de medo, falta de estrutura, gatilhos não identificados e — principalmente — por terem sido tratados com métodos que pioram o problema.</p>
-      <p>A boa notícia: existe um protocolo claro, testado e replicável que reverte esse comportamento dentro de casa, <strong>sem coleira de enforcamento, sem grito, sem castigo.</strong></p>
+    <div class="section-head reveal">
+      <span class="section-eyebrow">Depoimentos</span>
+      <h2>Este é o resultado de um método validado:</h2>
+    </div>
+  </div>
+
+  <div class="testi-marquee">
+    <div class="testi-track">
+      <figure class="testi-card"><img src="assets/depoimento-ana-clara.png" alt="Depoimento de Ana Clara" loading="lazy"><figcaption class="name">Ana Clara</figcaption></figure>
+      <figure class="testi-card"><img src="assets/depoimento-juliana.png" alt="Depoimento de Juliana Mendes" loading="lazy"><figcaption class="name">Juliana Mendes</figcaption></figure>
+      <figure class="testi-card"><img src="assets/depoimento-marcelo.png" alt="Depoimento de Marcelo" loading="lazy"><figcaption class="name">Marcelo</figcaption></figure>
+      <figure class="testi-card"><img src="assets/depoimento-claudia.png" alt="Depoimento de Claudia Soares" loading="lazy"><figcaption class="name">Claudia Soares</figcaption></figure>
+      <!-- duplicado para loop -->
+      <figure class="testi-card" aria-hidden="true"><img src="assets/depoimento-ana-clara.png" alt="" loading="lazy"><figcaption class="name">Ana Clara</figcaption></figure>
+      <figure class="testi-card" aria-hidden="true"><img src="assets/depoimento-juliana.png" alt="" loading="lazy"><figcaption class="name">Juliana Mendes</figcaption></figure>
+      <figure class="testi-card" aria-hidden="true"><img src="assets/depoimento-marcelo.png" alt="" loading="lazy"><figcaption class="name">Marcelo</figcaption></figure>
+      <figure class="testi-card" aria-hidden="true"><img src="assets/depoimento-claudia.png" alt="" loading="lazy"><figcaption class="name">Claudia Soares</figcaption></figure>
+    </div>
+  </div>
+
+  <div class="container">
+    <p class="testi-close reveal">Se essas pessoas conseguiram aplicar o método, você também consegue.</p>
+    <p class="testi-disclaimer">Resultados podem variar conforme aplicação do método. Casos de mordida grave requerem acompanhamento profissional presencial.</p>
+
+    <div style="text-align:center; margin-top:32px">
+      <a class="cta" href="https://pay.kiwify.com.br/oMXt839" target="_blank" rel="noopener">
+        Quero aplicar o método <span class="arrow">→</span>
+      </a>
     </div>
   </div>
 </section>
 
-<section class="method">
+<!-- ============================================================
+     FOR WHOM
+     ============================================================ -->
+<section class="for-whom">
   <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow">O Protocolo</span>
-      <h2>O Método dos 14 Dias</h2>
-      <p>Um passo por dia. Sem mistério. Sem teoria que não funciona na prática.</p>
+      <h2>Para quem é o <span class="accent" style="font-style:italic">Cão Mais Calmo</span>?</h2>
+      <p class="lead">Se você se encaixa em um desses perfis, este é o método perfeito para você.</p>
     </div>
-    <div class="pillars">
-      <article class="pillar reveal">
-        <span class="num">01</span>
-        <span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span>
-        <h3>Diagnóstico</h3>
-        <p>Identifique em poucos minutos qual dos <strong>7 tipos de agressividade</strong> seu cão apresenta — e qual o gatilho real por trás dela.</p>
+
+    <div class="profiles">
+      <article class="profile reveal" style="--rd:0s">
+        <div class="ck">✓</div>
+        <div>
+          <h3>Para quem já tentou de tudo e nada funcionou:</h3>
+          <p>Adestrador particular, ração especial, coleira de enforcamento, repressão — você gastou e o cachorro continua agressivo. O método ataca a causa, não o sintoma.</p>
+        </div>
       </article>
-      <article class="pillar reveal">
-        <span class="num">02</span>
-        <span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg></span>
-        <h3>Segurança Imediata</h3>
-        <p>Pare os episódios <strong>hoje</strong> com o protocolo de manejo de ambiente. Passos práticos que funcionam na primeira aplicação.</p>
+
+      <article class="profile reveal" style="--rd:.08s">
+        <div class="ck">✓</div>
+        <div>
+          <h3>Para quem tem medo do cão morder alguém da família:</h3>
+          <p>Crianças, parceiro, sogra, visitas. Você quer voltar a confiar no seu cachorro dentro de casa antes que aconteça algo pior.</p>
+        </div>
       </article>
-      <article class="pillar reveal">
-        <span class="num">03</span>
-        <span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 17l5-5 4 4 8-8"/><path d="M14 8h7v7"/></svg></span>
-        <h3>Reabilitação Progressiva</h3>
-        <p>Exercícios de dessensibilização <strong>dia a dia</strong> — 10 a 20 minutos. Construindo confiança, não obediência por medo.</p>
+
+      <article class="profile reveal" style="--rd:.16s">
+        <div class="ck">✓</div>
+        <div>
+          <h3>Para quem está sendo pressionado a entregar o cão:</h3>
+          <p>Vizinho reclamando, condomínio notificando, parceiro dando ultimato. Você sabe que ele pode mudar — só precisa do caminho certo para mostrar isso.</p>
+        </div>
       </article>
-      <article class="pillar reveal">
-        <span class="num">04</span>
-        <span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg></span>
-        <h3>Manutenção</h3>
-        <p>Como sustentar os resultados e <strong>prevenir recaídas</strong> pra vida toda — viagens, visitas e gatilhos imprevistos.</p>
+
+      <article class="profile reveal" style="--rd:.24s">
+        <div class="ck">✓</div>
+        <div>
+          <h3>Para quem não consegue mais passear na rua:</h3>
+          <p>Ele avança em outros cães, late em pessoas, puxa a guia sem parar. Você quer voltar a sair de casa com o cachorro sem ter ataque de pânico.</p>
+        </div>
+      </article>
+
+      <article class="profile reveal" style="--rd:.32s">
+        <div class="ck">✓</div>
+        <div>
+          <h3>Para quem adotou um cão com trauma:</h3>
+          <p>Pets resgatados ou de abrigo carregam histórico difícil. O método foi desenhado para esses casos — o foco é construir confiança, não impor obediência por medo.</p>
+        </div>
+      </article>
+
+      <article class="profile reveal" style="--rd:.4s">
+        <div class="ck">✓</div>
+        <div>
+          <h3>Para quem ama o cão e não quer mais grito nem castigo:</h3>
+          <p>Você sabe que punir não funciona — só piora o problema. Aqui você aprende um caminho baseado em comportamento, sem coleira de enforcamento, sem grito, sem castigo.</p>
+        </div>
       </article>
     </div>
   </div>
 </section>
-<section class="modulos">
+
+<!-- ============================================================
+     MODULES
+     ============================================================ -->
+<section class="modules">
   <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow">Conteúdo do ebook</span>
-      <h2>O que você encontra dentro do <em>Cão Mais Calmo em 14 Dias</em>?</h2>
-      <p>O método é dividido em 8 módulos progressivos. Você avança no seu ritmo — mas cada módulo conecta no próximo.</p>
+      <h2>O que você terá acesso dentro do <span class="accent" style="font-style:italic">Cão Mais Calmo</span>?</h2>
+    </div>
+
+    <div class="modules-intro reveal">
+      <span class="ck">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="3" width="18" height="18" rx="3"/>
+          <path d="M9 12l2 2 4-4"/>
+        </svg>
+      </span>
+      <p>Além do método, você recebe <strong style="color:#fff">8 módulos progressivos</strong> em formato de ebook que vão te guiar passo a passo, do diagnóstico inicial até a manutenção do resultado por toda a vida do seu cão.</p>
     </div>
 
     <div class="mod-grid">
-
       <article class="mod-card reveal">
-        <div class="art"><img src="assets/modulo-01.jpg" alt="Módulo 1 — Identifique a Origem da Raiva" loading="lazy" /></div>
-        <p class="desc">Descubra a causa real por trás da agressividade do seu cão. Sem suposição, sem culpa.</p>
+        <div class="art">
+          <img class="mod-img" src="assets/modulo-01.jpg" alt="Capa do Módulo 01" loading="lazy">
+        </div>
+        <div class="body">
+          <h3>Identifique a Origem da Raiva</h3>
+          <p>Descubra qual dos 7 tipos de agressividade canina o seu cão apresenta — porque o tratamento errado piora o problema.</p>
+        </div>
       </article>
 
       <article class="mod-card reveal">
-        <div class="art"><img src="assets/modulo-02.jpg" alt="Módulo 2 — A linguagem que ele usa antes de morder" loading="lazy" /></div>
-        <p class="desc">Aprenda os sinais que vem antes do rosnado. Você passa a antecipar — e não reagir.</p>
+        <div class="art">
+          <img class="mod-img" src="assets/modulo-02.jpg" alt="Capa do Módulo 02" loading="lazy">
+        </div>
+        <div class="body">
+          <h3>A Linguagem Antes da Mordida</h3>
+          <p>Os sinais invisíveis que seu cão dá antes de agredir — e que a maioria dos pais de pet ignora sem saber.</p>
+        </div>
       </article>
 
       <article class="mod-card reveal">
-        <div class="art"><img src="assets/modulo-03.jpg" alt="Módulo 3 — O Mapa dos Gatilhos" loading="lazy" /></div>
-        <p class="desc">Identifique o que dispara a reação do seu cão e como neutralizar cada situação.</p>
+        <div class="art">
+          <img class="mod-img" src="assets/modulo-03.jpg" alt="Capa do Módulo 03" loading="lazy">
+        </div>
+        <div class="body">
+          <h3>O Mapa dos Gatilhos</h3>
+          <p>Como identificar, registrar e neutralizar os gatilhos específicos do seu cão antes que gerem um episódio.</p>
+        </div>
       </article>
 
       <article class="mod-card reveal">
-        <div class="art"><img src="assets/modulo-04.jpg" alt="Módulo 4 — Modo de Contenção Imediata" loading="lazy" /></div>
-        <p class="desc">Protocolo prático para as primeiras 24h. Pare os episódios hoje, sem improviso.</p>
+        <div class="art">
+          <img class="mod-img" src="assets/modulo-04.jpg" alt="Capa do Módulo 04" loading="lazy">
+        </div>
+        <div class="body">
+          <h3>Contenção Imediata</h3>
+          <p>O protocolo de emergência para parar os episódios ainda essa semana, enquanto a reabilitação acontece.</p>
+        </div>
       </article>
 
       <article class="mod-card reveal">
-        <div class="art"><img src="assets/modulo-05.jpg" alt="Módulo 5 — Os 14 Dias: O Protocolo Completo" loading="lazy" /></div>
-        <p class="desc">O plano dia a dia, passo a passo. Você só precisa seguir.</p>
+        <div class="art">
+          <img class="mod-img" src="assets/modulo-05.jpg" alt="Capa do Módulo 05" loading="lazy">
+        </div>
+        <div class="body">
+          <h3>Os 14 Dias: Protocolo Completo</h3>
+          <p>O plano dia a dia de dessensibilização e recondicionamento — um exercício por dia, sem precisar de experiência.</p>
+        </div>
       </article>
 
       <article class="mod-card reveal">
-        <div class="art"><img src="assets/modulo-06.jpg" alt="Módulo 6 — Missões Específicas" loading="lazy" /></div>
-        <p class="desc">Exercícios direcionados para cada tipo de comportamento e cada nível de gravidade.</p>
+        <div class="art">
+          <img class="mod-img" src="assets/modulo-06.jpg" alt="Capa do Módulo 06" loading="lazy">
+        </div>
+        <div class="body">
+          <h3>Missões Específicas</h3>
+          <p>Protocolos separados para as situações mais temidas: visitas em casa, crianças, passeio na rua e entregadores.</p>
+        </div>
       </article>
 
       <article class="mod-card reveal">
-        <div class="art"><img src="assets/modulo-07.jpg" alt="Módulo 7 — Quando parece que não está funcionando" loading="lazy" /></div>
-        <p class="desc">Como identificar recaídas, ajustar a rota e voltar ao progresso sem desanimar.</p>
+        <div class="art">
+          <img class="mod-img" src="assets/modulo-07.jpg" alt="Capa do Módulo 07" loading="lazy">
+        </div>
+        <div class="body">
+          <h3>Quando Parece Não Funcionar</h3>
+          <p>O que fazer nos dias difíceis, como lidar com recaídas e por que regredir faz parte do processo.</p>
+        </div>
       </article>
 
       <article class="mod-card reveal">
-        <div class="art"><img src="assets/modulo-08.jpg" alt="Módulo 8 — O Novo Normal" loading="lazy" /></div>
-        <p class="desc">Como sustentar o resultado pra vida toda — sem voltar pro ponto de partida.</p>
+        <div class="art">
+          <img class="mod-img" src="assets/modulo-08.jpg" alt="Capa do Módulo 08" loading="lazy">
+        </div>
+        <div class="body">
+          <h3>O Novo Normal</h3>
+          <p>Como manter os resultados para sempre e construir uma rotina que mantém seu cão equilibrado a longo prazo.</p>
+        </div>
       </article>
-
     </div>
 
-    <p class="modulos-foot reveal">+ <strong>3 bônus exclusivos</strong> em ebook que você verá abaixo.</p>
+    <p class="modules-foot reveal">
+      <strong style="color:#fff">+ 3 bônus exclusivos</strong> que você vai conhecer logo abaixo.
+    </p>
   </div>
 </section>
 
+<!-- ============================================================
+     ACCESS BLOCK
+     ============================================================ -->
+<section class="access">
+  <div class="container">
+    <div class="access-grid">
+      <div class="access-text reveal">
+        <h2>Acesso imediato<br>a todo o método <span class="accent">vitalício</span></h2>
+        <p>Ao se inscrever, você recebe <strong>acesso imediato e vitalício</strong> à área exclusiva de membros. Todo o método fica disponível para você aplicar no seu ritmo, sem pressão.</p>
+        <p>Você terá acesso a conteúdos práticos em formato de <strong>ebooks digitais e checklists imprimíveis</strong>, criados para facilitar a aplicação no dia a dia mesmo que você tenha pouco tempo.</p>
+        <p><strong>Tudo organizado passo a passo</strong>, para você usar sempre que precisar recuperar o controle dentro de casa, parar um episódio de agressividade ou voltar a passear sem medo.</p>
+        <p><strong style="color:#fff">Você paga uma única vez e tem acesso para sempre.</strong></p>
+      </div>
+      <div class="access-img reveal">
+        <img src="assets/hero-mockup.png" alt="Acesso ao método em qualquer dispositivo">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     MARQUEE BANNER
+     ============================================================ -->
+<div class="marquee-banner">
+  <div class="marquee-banner-track">
+    <span>Mais paz</span><span class="sep">·</span>
+    <span>Mais confiança</span><span class="sep">·</span>
+    <span>Mais controle</span><span class="sep">·</span>
+    <span>Mais segurança</span><span class="sep">·</span>
+    <span>Mais vínculo</span><span class="sep">·</span>
+    <span>Mais paz</span><span class="sep">·</span>
+    <span>Mais confiança</span><span class="sep">·</span>
+    <span>Mais controle</span><span class="sep">·</span>
+    <span>Mais segurança</span><span class="sep">·</span>
+    <span>Mais vínculo</span><span class="sep">·</span>
+    <span>Mais paz</span><span class="sep">·</span>
+    <span>Mais confiança</span><span class="sep">·</span>
+    <span>Mais controle</span><span class="sep">·</span>
+    <span>Mais segurança</span><span class="sep">·</span>
+    <span>Mais vínculo</span><span class="sep">·</span>
+  </div>
+</div>
+
+<!-- ============================================================
+     BONUS
+     ============================================================ -->
 <section class="bonus">
   <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow">Bônus inclusos</span>
-      <h2>Além do método, você ainda recebe<br/><em>3 bônus exclusivos</em>.</h2>
-      <p>Sem custo adicional. Tudo entregue junto com o ebook principal.</p>
+      <h2>Além de todo o método, você ainda recebe<br><span class="accent" style="font-style:italic">3 bônus exclusivos</span> (sem custo adicional)</h2>
     </div>
 
     <div class="bonus-grid">
-
-      <article class="bonus-card reveal">
-        <div class="giftbox" aria-hidden="true">
-          <div class="box"></div>
-          <div class="lid"></div>
-          <div class="bow-l"></div>
-          <div class="bow-r"></div>
-          <div class="knot"></div>
-        </div>
-        <span class="bonus-tag">Bônus 01</span>
-        <h3>Alimentação Natural<br/>que ajuda na calma do cão</h3>
-        <p class="bonus-desc">Quais alimentos acalmam o sistema nervoso do seu cachorro — e quais ingredientes do dia a dia podem estar piorando a agitação e a agressividade.</p>
-        <div class="bonus-price">
-          <span class="v">Valor individual: <s>R$ 17</s></span>
-          <span class="free">Hoje: grátis</span>
+      <article class="bonus-card reveal" style="--rd:0s">
+        <span class="gift">🎁</span>
+        <span class="tag">Bônus 01</span>
+        <h3>Alimentação Natural que Ajuda na Calma do Cão</h3>
+        <p class="desc">Quais alimentos acalmam o sistema nervoso do seu cachorro — e quais ingredientes do dia a dia podem estar piorando a agitação e a agressividade.</p>
+        <div class="price-row">
+          <span class="val">💰 Valor individual: <s>R$ 147,00</s></span>
+          <span class="free">🎁 Hoje: <strong>R$ 0</strong></span>
         </div>
       </article>
 
-      <article class="bonus-card reveal">
-        <div class="giftbox" aria-hidden="true">
-          <div class="box"></div>
-          <div class="lid"></div>
-          <div class="bow-l"></div>
-          <div class="bow-r"></div>
-          <div class="knot"></div>
-        </div>
-        <span class="bonus-tag">Bônus 02</span>
-        <h3>Adestramento em Casa:<br/>o básico que todo cão precisa saber</h3>
-        <p class="bonus-desc">Os comandos essenciais (senta, fica, vem, no lugar) ensinados sem grito e sem coleira de enforcamento — em poucos minutos por dia, dentro de casa.</p>
-        <div class="bonus-price">
-          <span class="v">Valor individual: <s>R$ 17</s></span>
-          <span class="free">Hoje: grátis</span>
+      <article class="bonus-card reveal" style="--rd:.08s">
+        <span class="gift">🎁</span>
+        <span class="tag">Bônus 02</span>
+        <h3>Adestramento em Casa: o Básico que Todo Cão Precisa</h3>
+        <p class="desc">Os comandos essenciais (senta, fica, vem, no lugar) ensinados sem grito e sem coleira de enforcamento — em poucos minutos por dia, dentro de casa.</p>
+        <div class="price-row">
+          <span class="val">💰 Valor individual: <s>R$ 197,00</s></span>
+          <span class="free">🎁 Hoje: <strong>R$ 0</strong></span>
         </div>
       </article>
 
-      <article class="bonus-card reveal">
-        <div class="giftbox" aria-hidden="true">
-          <div class="box"></div>
-          <div class="lid"></div>
-          <div class="bow-l"></div>
-          <div class="bow-r"></div>
-          <div class="knot"></div>
-        </div>
-        <span class="bonus-tag">Bônus 03</span>
-        <h3>Primeiros Socorros Pet<br/>e manejo de estresse agudo</h3>
-        <p class="bonus-desc">O que fazer nos primeiros minutos de um susto, mordida, briga ou crise de pânico — com checklist pra imprimir e deixar na geladeira.</p>
-        <div class="bonus-price">
-          <span class="v">Valor individual: <s>R$ 17</s></span>
-          <span class="free">Hoje: grátis</span>
+      <article class="bonus-card reveal" style="--rd:.16s">
+        <span class="gift">🎁</span>
+        <span class="tag">Bônus 03</span>
+        <h3>Primeiros Socorros Pet e Manejo de Estresse Agudo</h3>
+        <p class="desc">O que fazer nos primeiros minutos de um susto, mordida, briga ou crise de pânico — com checklist para imprimir e deixar na geladeira.</p>
+        <div class="price-row">
+          <span class="val">💰 Valor individual: <s>R$ 247,00</s></span>
+          <span class="free">🎁 Hoje: <strong>R$ 0</strong></span>
         </div>
       </article>
-
     </div>
 
-    <div class="bonus-total reveal">
-      <div class="l">Valor total dos bônus:</div>
-      <div class="v"><s>R$ 51</s>Inclusos no seu acesso</div>
-    </div>
+    <p class="bonus-others reveal">
+      <span style="color:#fff">Valor total dos bônus:</span> <s style="color:var(--muted)">R$ 591</s> <span class="accent" style="font-weight:600">inclusos no seu acesso de hoje.</span>
+    </p>
   </div>
 </section>
 
-<section class="testi">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="eyebrow">Depoimentos</span>
-      <h2>O que pais e mães de pet estão dizendo <em>no privado</em>.</h2>
-      <p>Mensagens reais que recebemos no privado e nas redes (com autorização).</p>
-    </div>
-  </div>
-
-  <div class="marquee" aria-label="Carrossel de depoimentos">
-    <div class="marquee-track">
-
-      <!-- ============ 4 prints reais ============ -->
-      <figure class="chat-card"><img src="assets/depoimento-ana-clara.png" alt="Depoimento de Ana Clara: ‘Você tá ajudando a salvar minha família.’" loading="lazy" /><figcaption class="name-tag">Ana Clara</figcaption></figure>
-      <figure class="chat-card"><img src="assets/depoimento-juliana.png" alt="Depoimento de Juliana Mendes: ‘Você salvou minha vida.’" loading="lazy" /><figcaption class="name-tag">Juliana Mendes</figcaption></figure>
-      <figure class="chat-card"><img src="assets/depoimento-marcelo.png" alt="Depoimento de Marcelo: ‘O Thor já tá bem mais tranquilo.’" loading="lazy" /><figcaption class="name-tag">Marcelo</figcaption></figure>
-      <figure class="chat-card"><img src="assets/depoimento-claudia.png" alt="Depoimento de Claudia Soares: ‘Conseguimos passear tranquilos.’" loading="lazy" /><figcaption class="name-tag">Claudia Soares</figcaption></figure>
-
-      <!-- ============ duplicata para loop infinito ============ -->
-      <figure class="chat-card" aria-hidden="true"><img src="assets/depoimento-ana-clara.png" alt="" loading="lazy" /><figcaption class="name-tag">Ana Clara</figcaption></figure>
-      <figure class="chat-card" aria-hidden="true"><img src="assets/depoimento-juliana.png" alt="" loading="lazy" /><figcaption class="name-tag">Juliana Mendes</figcaption></figure>
-      <figure class="chat-card" aria-hidden="true"><img src="assets/depoimento-marcelo.png" alt="" loading="lazy" /><figcaption class="name-tag">Marcelo</figcaption></figure>
-      <figure class="chat-card" aria-hidden="true"><img src="assets/depoimento-claudia.png" alt="" loading="lazy" /><figcaption class="name-tag">Claudia Soares</figcaption></figure>
-
-    </div>
-  </div>
-
-  <p class="testi-disclaimer">Resultados podem variar conforme aplicação do método. Casos de mordida grave requerem acompanhamento profissional presencial.</p>
-</section>
-
-<section class="guarantee">
-  <div class="container">
-    <div class="guarantee-card reveal">
-      <div class="shield"><span class="n">7</span><span class="d">Dias</span></div>
-      <h2>Garantia incondicional de 7 dias</h2>
-      <p>Compre, acesse o material, comece a aplicar. Se em 7 dias você sentir que <strong>não é pra você</strong>, devolvemos 100% do valor. Sem pergunta, sem burocracia. <strong>O risco é todo nosso.</strong></p>
-    </div>
-  </div>
-</section>
-
+<!-- ============================================================
+     OFFER / PRICE
+     ============================================================ -->
 <section class="offer" id="oferta">
   <div class="container">
-    <div class="section-head reveal">
-      <span class="eyebrow">Oferta especial</span>
-      <h2>Tudo o que você precisa<br/>para começar hoje.</h2>
-    </div>
     <div class="offer-card reveal">
-      <ul class="value-list">
-        <li><span class="label"><span class="ck">✓</span> Ebook principal · 14 dias</span><span><s class="price">R$ 37</s> <span class="incluso">Incluso</span></span></li>
-        <li><span class="label"><span class="ck">✓</span> Bônus: Alimentação Natural para Cães</span><span><s class="price">R$ 17</s> <span class="incluso">Incluso</span></span></li>
-        <li><span class="label"><span class="ck">✓</span> Bônus: Adestramento em Casa</span><span><s class="price">R$ 17</s> <span class="incluso">Incluso</span></span></li>
-        <li><span class="label"><span class="ck">✓</span> Bônus: Primeiros Socorros Pet</span><span><s class="price">R$ 17</s> <span class="incluso">Incluso</span></span></li>
+      <h2>Reabilite a agressividade do seu cão em até 14 dias e volte a viver em paz dentro de casa — com um investimento simbólico</h2>
+      <p class="promo-note">⏰ Condição promocional por tempo limitado.</p>
+
+      <p class="access-label">Você terá acesso a:</p>
+
+      <ul class="offer-list">
+        <li><span class="ck">✓</span> Ebook principal — Método dos 14 Dias (8 módulos)</li>
+        <li><span class="ck">✓</span> Bônus 01: Alimentação Natural para Cães</li>
+        <li><span class="ck">✓</span> Bônus 02: Adestramento em Casa</li>
+        <li><span class="ck">✓</span> Bônus 03: Primeiros Socorros Pet</li>
+        <li><span class="ck">✓</span> Acesso imediato após a compra</li>
+        <li><span class="ck">✓</span> Acesso vitalício a todo o conteúdo</li>
+        <li><span class="ck">✓</span> Mais de 90% de desconto hoje</li>
+        <li><span class="ck">✓</span> Compra 100% segura</li>
       </ul>
-      <div class="total-row">
-        <span>Valor total:</span>
-        <span class="v"><s style="color:var(--muted);font-weight:400;">R$ 189,90</s></span>
-      </div>
+
       <div class="price-block">
-        <div class="hoje">Hoje você leva tudo por:</div>
-        <div class="old">R$ 189,90</div>
-        <div class="now"><small>R$</small> 37</div>
-        <div class="parc">à vista no Pix · ou <strong>8x de R$ 5,38</strong> no cartão</div>
-        <a class="cta" href="https://pay.kiwify.com.br/oMXt839">Quero acessar agora <span class="arrow">→</span></a>
+        <div class="de">DE: <s>R$ 591,00</s></div>
+        <div class="por">Por apenas:</div>
+        <div class="parcel">8x de</div>
+        <div class="now"><small>R$</small>5<span style="font-size:.5em">,38</span></div>
+        <div class="pix-note">Ou <strong>R$ 37,00 à vista no Pix</strong></div>
+
+        <a class="cta" href="https://pay.kiwify.com.br/oMXt839" target="_blank" rel="noopener">
+          Quero acessar agora <span class="arrow">→</span>
+        </a>
+
         <div class="cta-micro">
           <span>Acesso imediato</span><span class="dot"></span>
           <span>Garantia de 7 dias</span><span class="dot"></span>
           <span>Compra 100% segura</span>
         </div>
+
+        <p class="investment-line">Você investe em uma família mais segura, em paz dentro de casa, e em um cão que volta a ser confiável — por um valor simbólico.</p>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ============================================================
+     GUARANTEE
+     ============================================================ -->
+<section class="guarantee-section">
+  <div class="container">
+    <div class="guarantee-card reveal">
+      <div class="guarantee-seal">
+        <span class="n">7</span>
+        <span class="d">DIAS</span>
+        <span class="text">Garantia</span>
+      </div>
+      <div class="guarantee-text">
+        <h2>Experimente por 7 dias</h2>
+        <p>Estamos tão confiantes de que você vai aplicar o método e ver seu cachorro mudar nos primeiros dias, que oferecemos uma <strong>garantia incondicional de 7 dias</strong>. Compre, acesse o material, comece a aplicar. Se sentir que <strong>não é pra você</strong>, basta nos enviar um e-mail e devolvemos 100% do valor. Sem pergunta, sem burocracia. <strong>O risco é todo nosso.</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FAQ
+     ============================================================ -->
 <section class="faq">
   <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow">Perguntas frequentes</span>
-      <h2>Antes de você decidir.</h2>
+      <h2>Perguntas frequentes</h2>
     </div>
-    <div class="faq-list reveal">
-      <details class="faq-item">
+
+    <div class="faq-list">
+      <details class="faq-item reveal" open>
+        <summary>Por quanto tempo tenho acesso ao método?</summary>
+        <div class="answer">O acesso é vitalício — você poderá acessar o conteúdo quantas vezes desejar, sempre que precisar, do celular, tablet ou computador.</div>
+      </details>
+
+      <details class="faq-item reveal">
         <summary>Funciona pra qualquer raça e tamanho de cão?</summary>
-        <div class="answer">Sim. O método é baseado em comportamento, não em raça. Já foi aplicado em pinschers de 3kg até rottweilers de 50kg. O que muda é o ritmo — cães maiores costumam precisar de mais atenção ao protocolo de segurança nos primeiros dias.</div>
+        <div class="answer">Sim. O método é baseado em comportamento, não em raça. Já foi aplicado em pinschers de 3kg até rottweilers de 50kg. O que muda é o ritmo — cães maiores costumam exigir mais atenção ao protocolo de contenção nos primeiros dias.</div>
       </details>
-      <details class="faq-item">
+
+      <details class="faq-item reveal">
         <summary>Em quanto tempo eu começo a ver resultado?</summary>
-        <div class="answer">A maioria dos pais e mães de pet relata mudança visível entre o <strong>dia 3 e o dia 5</strong> — principalmente uma redução clara dos episódios de rosnado ou avanço. O resultado completo se consolida nos 14 dias.</div>
+        <div class="answer">A maioria dos pais e mães de pet relata mudança visível entre o <strong>dia 3 e o dia 5</strong> — principalmente uma redução clara dos episódios de rosnado e avanço. O resultado completo se consolida nos 14 dias e a manutenção segue pelo módulo 8.</div>
       </details>
-      <details class="faq-item">
+
+      <details class="faq-item reveal">
         <summary>Preciso ter experiência com adestramento?</summary>
-        <div class="answer">Não. O método foi escrito justamente para quem nunca treinou um cachorro. Cada dia tem instruções passo a passo, em linguagem simples e direta.</div>
+        <div class="answer">Não. O método foi escrito justamente para quem nunca treinou um cachorro. Cada dia tem instruções passo a passo, em linguagem simples e direta — sem termos técnicos.</div>
       </details>
-      <details class="faq-item">
+
+      <details class="faq-item reveal">
         <summary>E se meu cão for adotado e tiver trauma?</summary>
-        <div class="answer">A maior parte dos casos que atendemos são exatamente esses. O método foi desenhado pensando em cães com histórico difícil — o foco é construir confiança, não impor obediência.</div>
+        <div class="answer">A maior parte dos casos que atendemos são exatamente esses. O método foi desenhado pensando em cães com histórico difícil — o foco é construir confiança, não impor obediência por medo.</div>
       </details>
-      <details class="faq-item">
+
+      <details class="faq-item reveal">
         <summary>Funciona pra cães idosos?</summary>
-        <div class="answer">Sim. Idade não muda a capacidade do cão de aprender — muda só o ritmo. Para cães sêniores, recomendamos sessões mais curtas e o módulo bônus específico que está dentro do curso.</div>
+        <div class="answer">Sim. Idade não muda a capacidade do cão de aprender — muda só o ritmo. Para cães sêniores, recomendamos sessões mais curtas e ajustes que estão dentro do módulo de reabilitação progressiva.</div>
       </details>
-      <details class="faq-item">
+
+      <details class="faq-item reveal">
         <summary>Como recebo o material?</summary>
-        <div class="answer">Acesso imediato. Após a compra, você recebe o ebook principal mais os bônus (Alimentação Natural, Adestramento em Casa, Primeiros Socorros Pet) e o Diário de Progresso por e-mail. Funciona no celular, tablet e computador.</div>
+        <div class="answer">Acesso imediato. Após a compra, você recebe o ebook principal mais os 3 bônus (Alimentação Natural, Adestramento em Casa e Primeiros Socorros Pet) por e-mail. Funciona em celular, tablet e computador.</div>
       </details>
-      <details class="faq-item">
+
+      <details class="faq-item reveal">
         <summary>Posso pedir reembolso?</summary>
         <div class="answer">Sim, em até 7 dias após a compra. Sem perguntas, sem burocracia. Basta enviar um e-mail e devolvemos 100% do valor.</div>
       </details>
     </div>
-  </div>
-</section>
 
-<section class="ps">
-  <div class="container">
-    <div class="ps-card reveal">
-      <div class="ps-label">PS — Uma última coisa.</div>
-      <p>Cada dia que passa sem ação é um dia a mais de risco.<br/>Não espere a próxima mordida pra agir.<br/><br/>Seu cachorro confia em você — e você pode confiar nesse método. Comece hoje, com 7 dias de garantia. Se não for pra você, devolvemos tudo. Se for, você recupera o cão que sempre soube que ele poderia ser.</p>
-      <div class="cta-wrap">
-        <a class="cta" href="#oferta">Começar agora <span class="arrow">→</span></a>
-        <div class="cta-micro">
-          <span>Acesso imediato</span><span class="dot"></span>
-          <span>Garantia de 7 dias</span>
-        </div>
-      </div>
+    <div style="text-align:center; margin-top:32px" class="reveal">
+      <a class="cta" href="https://pay.kiwify.com.br/oMXt839" target="_blank" rel="noopener">
+        Quero começar agora <span class="arrow">→</span>
+      </a>
     </div>
   </div>
 </section>
 
-<footer>
+<!-- ============================================================
+     FINAL CTA / RATING
+     ============================================================ -->
+<section class="final-cta">
   <div class="container">
-    <div class="ft-top">
+    <div class="rating">
+      <span class="star">★</span>
+      <span class="star">★</span>
+      <span class="star">★</span>
+      <span class="star">★</span>
+      <span class="star">★</span>
+    </div>
+
+    <p class="secure-text">
+      <strong>Termos de Uso · Política de Privacidade · Contato</strong><br>
+      Este material tem caráter educativo e não substitui acompanhamento profissional de médico veterinário ou comportamentalista canino em casos graves. Casos de mordida grave requerem acompanhamento profissional presencial. Resultados podem variar conforme a aplicação do método e dependem unicamente da consistência de cada pessoa em colocar em prática os ensinamentos. A chave para ter resultado é a consistência.
+    </p>
+
+    <a href="#topo" class="back-top">
+      <span class="arr">↑</span>
+      Voltar ao topo
+    </a>
+  </div>
+</section>
+
+<!-- ============================================================
+     LEGAL FOOTER
+     ============================================================ -->
+<footer class="legal">
+  <div class="container">
+    <div class="legal-top">
       <div>
         <h4>Cão Mais Calmo em 14 Dias</h4>
         <div>Método para pais de pet.</div>
-        <div style="margin-top:8px;">caomaiscalmo@outlook.com</div>
+        <div style="margin-top:8px">caomaiscalmo@outlook.com</div>
         <div>CNPJ 36.149.947/0001-06</div>
       </div>
-      <div class="ft-links">
+      <div class="legal-links">
         <a href="#">Política de Privacidade</a>
         <a href="#">Termos de Uso</a>
-        <a href="#oferta">Comprar</a>
+        <a href="https://pay.kiwify.com.br/oMXt839" target="_blank" rel="noopener">Comprar</a>
       </div>
     </div>
-    <p class="disclaimer">Este material tem caráter educativo e não substitui acompanhamento profissional de médico veterinário ou comportamentalista canino em casos graves. Resultados podem variar conforme a aplicação do método.</p>
   </div>
 </footer>
 
+<!-- ============================================================
+     STICKY MOBILE CTA
+     ============================================================ -->
 <div class="sticky-cta" id="stickyCta" aria-hidden="true">
   <div class="meta">
     <div class="l">Hoje · oferta</div>
-    <div class="p"><s>R$ 189,90</s> R$ 37</div>
+    <div class="p"><s>R$ 591</s> <span class="accent">R$ 37</span></div>
   </div>
-  <a class="cta" href="#oferta">Quero acessar <span class="arrow">→</span></a>
+  <a class="cta" href="https://pay.kiwify.com.br/oMXt839" target="_blank" rel="noopener">
+    Quero acessar <span class="arrow">→</span>
+  </a>
 </div>
 
 <script>
+/* ============================================================
+   REVEAL ON SCROLL
+   ============================================================ */
 (function(){
-  if (!('IntersectionObserver' in window)) {
+  if(!('IntersectionObserver' in window)){
     document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
     return;
   }
-  // Stagger automático para irmãos com .reveal dentro do mesmo container
-  const groups = ['.pillars', '.pain-list', '.faq-list', '.value-list', '.mod-grid', '.bonus-grid'];
-  groups.forEach(sel => {
-    document.querySelectorAll(sel).forEach(group => {
-      [...group.children].forEach((child, i) => {
-        if (!child.classList.contains('reveal')) child.classList.add('reveal');
-        child.style.setProperty('--rd', (i * 0.08) + 's');
-      });
-    });
-  });
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => {
-      if (e.isIntersecting){
+      if(e.isIntersecting){
         e.target.classList.add('in');
         io.unobserve(e.target);
       }
     });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  }, { threshold: 0.10, rootMargin: '0px 0px -40px 0px' });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 })();
 
+/* ============================================================
+   STICKY CTA on scroll
+   ============================================================ */
 (function(){
   const cta = document.getElementById('stickyCta');
-  if (!cta) return;
+  if(!cta) return;
   let shown = false;
   const onScroll = () => {
     const h = document.documentElement;
-    const scrolled = (h.scrollTop || document.body.scrollTop);
+    const scrolled = h.scrollTop || document.body.scrollTop;
     const total = h.scrollHeight - h.clientHeight;
     const pct = total > 0 ? scrolled / total : 0;
-    if (pct > 0.30 && !shown){
+    if(pct > 0.25 && !shown){
       cta.classList.add('show');
-      cta.setAttribute('aria-hidden', 'false');
+      cta.setAttribute('aria-hidden','false');
       document.body.classList.add('has-sticky');
       shown = true;
-    } else if (pct <= 0.05 && shown){
+    } else if(pct <= 0.05 && shown){
       cta.classList.remove('show');
-      cta.setAttribute('aria-hidden', 'true');
+      cta.setAttribute('aria-hidden','true');
       document.body.classList.remove('has-sticky');
       shown = false;
     }
@@ -1074,72 +1799,56 @@ footer .disclaimer{border-top:1px solid rgba(255,255,255,.08);margin-top:22px;pa
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 })();
-</script>
-<script>
-// ============================================================
-// COUNTDOWN — 1h por visitante, persistido em localStorage
-// ============================================================
+
+/* ============================================================
+   COUNTDOWN — fim do dia (zera todo dia à meia-noite)
+   ============================================================ */
 (function(){
-  const bar = document.getElementById('countdownBar');
-  const timerEl = document.getElementById('countdownTimer');
-  if (!bar || !timerEl) return;
+  const h = document.getElementById('cdH');
+  const m = document.getElementById('cdM');
+  const s = document.getElementById('cdS');
+  if(!h || !m || !s) return;
 
-  const DURATION_MS = 60 * 60 * 1000; // 1 hora
-  const KEY = 'cmc14d_promo_end';
-
-  let endAt = parseInt(localStorage.getItem(KEY) || '0', 10);
-  const now = Date.now();
-  // Se não existe ou já expirou há mais de 30min, reinicia o ciclo
-  if (!endAt || (now - endAt) > 30 * 60 * 1000) {
-    endAt = now + DURATION_MS;
-    try { localStorage.setItem(KEY, String(endAt)); } catch(e){}
-  }
-
-  const pad = (n) => String(Math.max(0, n)).padStart(2, '0');
+  function pad(n){ return String(Math.max(0,n)).padStart(2,'0'); }
 
   function tick(){
-    const remaining = endAt - Date.now();
-    if (remaining <= 0){
-      timerEl.textContent = '00:00:00';
-      bar.classList.add('expired');
-      // mantém a barra visuável mas com texto de última chance
-      bar.querySelector('.label').textContent = 'Última chance — oferta encerrada:';
-      return;
-    }
-    const h = Math.floor(remaining / 3600000);
-    const m = Math.floor((remaining % 3600000) / 60000);
-    const s = Math.floor((remaining % 60000) / 1000);
-    timerEl.textContent = pad(h) + ':' + pad(m) + ':' + pad(s);
-    requestAnimationFrame(() => setTimeout(tick, 250));
+    const now = new Date();
+    const end = new Date(now);
+    end.setHours(23,59,59,999); // final do dia atual
+    let diff = end - now;
+    if(diff < 0) diff = 0;
+    const hh = Math.floor(diff / 3600000);
+    const mm = Math.floor((diff % 3600000) / 60000);
+    const ss = Math.floor((diff % 60000) / 1000);
+    h.textContent = pad(hh);
+    m.textContent = pad(mm);
+    s.textContent = pad(ss);
   }
   tick();
+  setInterval(tick, 1000);
 })();
-</script>
 
-<script>
-// UTM passthrough — anexa utm_* e src da URL atual aos links Kiwify
-document.addEventListener('DOMContentLoaded', function () {
-  var pageParams = new URLSearchParams(window.location.search);
-  var toPass = new URLSearchParams();
-
-  pageParams.forEach(function (value, key) {
-    if (key === 'src' || key.indexOf('utm_') === 0) {
-      toPass.set(key, value);
+/* ============================================================
+   UTM passthrough
+   ============================================================ */
+document.addEventListener('DOMContentLoaded', function(){
+  const pageParams = new URLSearchParams(window.location.search);
+  const toPass = new URLSearchParams();
+  pageParams.forEach((v,k)=>{
+    if(k === 'src' || k.indexOf('utm_') === 0){
+      toPass.set(k, v);
     }
   });
-
-  if (!toPass.toString()) return; // sem parâmetros relevantes, não faz nada
-
-  document.querySelectorAll('a[href*="kiwify.com.br"], a[href*="kiwify.app"]').forEach(function (link) {
-    var dest = new URL(link.href, window.location.href);
-    toPass.forEach(function (value, key) {
-      if (!dest.searchParams.has(key)) {
-        dest.searchParams.set(key, value);
-      }
-    });
-    link.href = dest.toString();
+  if(!toPass.toString()) return;
+  document.querySelectorAll('a[href*="kiwify.com.br"], a[href*="kiwify.app"]').forEach(link => {
+    try {
+      const dest = new URL(link.href, window.location.href);
+      toPass.forEach((v,k)=>{ if(!dest.searchParams.has(k)) dest.searchParams.set(k,v); });
+      link.href = dest.toString();
+    } catch(e){}
   });
 });
 </script>
+
 </body>
 </html>
