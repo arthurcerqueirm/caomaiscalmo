@@ -1171,7 +1171,7 @@ section{padding:56px 0; position:relative}
     <span class="sep">:</span>
     <span class="seg" id="cdS" data-label="SEG">24</span>
   </div>
-  <a href="https://pay.kiwify.com.br/oMXt839" target="_blank" rel="noopener" class="bar-cta">Quero fazer parte →</a>
+  <a href="#oferta" class="bar-cta scroll-to-offer">Quero fazer parte →</a>
 </div>
 
 <!-- ============================================================
@@ -1206,7 +1206,7 @@ section{padding:56px 0; position:relative}
 
     <p class="invite reveal in">Faça parte dessa transformação hoje mesmo.</p>
 
-    <a class="cta" href="https://pay.kiwify.com.br/oMXt839" target="_blank" rel="noopener">
+    <a class="cta scroll-to-offer" href="#oferta">
       Quero reabilitar meu cão <span class="arrow">→</span>
     </a>
 
@@ -1303,7 +1303,7 @@ section{padding:56px 0; position:relative}
     <p class="testi-disclaimer">Resultados podem variar conforme aplicação do método. Casos de mordida grave requerem acompanhamento profissional presencial.</p>
 
     <div style="text-align:center; margin-top:32px">
-      <a class="cta" href="https://pay.kiwify.com.br/oMXt839" target="_blank" rel="noopener">
+      <a class="cta scroll-to-offer" href="#oferta">
         Quero aplicar o método <span class="arrow">→</span>
       </a>
     </div>
@@ -1597,8 +1597,8 @@ section{padding:56px 0; position:relative}
       <div class="price-block">
         <div class="de">DE: <s>R$ 591,00</s></div>
         <div class="por">Por apenas:</div>
-        <div class="parcel">6x de</div>
-        <div class="now"><small>R$</small>6<span style="font-size:.5em">,93</span></div>
+        <div class="parcel">12x de</div>
+        <div class="now"><small>R$</small>6<span style="font-size:.5em">,90</span></div>
         <div class="pix-note">Ou <strong>R$ 67,00 à vista no Pix</strong></div>
 
         <a class="cta" href="https://pay.kiwify.com.br/oMXt839" target="_blank" rel="noopener">
@@ -1688,7 +1688,7 @@ section{padding:56px 0; position:relative}
     </div>
 
     <div style="text-align:center; margin-top:32px" class="reveal">
-      <a class="cta" href="https://pay.kiwify.com.br/oMXt839" target="_blank" rel="noopener">
+      <a class="cta scroll-to-offer" href="#oferta">
         Quero começar agora <span class="arrow">→</span>
       </a>
     </div>
@@ -1735,7 +1735,7 @@ section{padding:56px 0; position:relative}
       <div class="legal-links">
         <a href="#">Política de Privacidade</a>
         <a href="#">Termos de Uso</a>
-        <a href="https://pay.kiwify.com.br/oMXt839" target="_blank" rel="noopener">Comprar</a>
+        <a href="#oferta" class="scroll-to-offer">Comprar</a>
       </div>
     </div>
   </div>
@@ -1749,7 +1749,7 @@ section{padding:56px 0; position:relative}
     <div class="l">Hoje · oferta</div>
     <div class="p"><s>R$ 591</s> <span class="accent">R$ 67</span></div>
   </div>
-  <a class="cta" href="https://pay.kiwify.com.br/oMXt839" target="_blank" rel="noopener">
+  <a class="cta scroll-to-offer" href="#oferta">
     Quero acessar <span class="arrow">→</span>
   </a>
 </div>
@@ -1842,6 +1842,14 @@ document.addEventListener('DOMContentLoaded', function(){
     }
   });
   if(!toPass.toString()) return;
+  document.querySelectorAll('.scroll-to-offer').forEach(link => {
+    link.addEventListener('click', function(e){
+      e.preventDefault();
+      const target = document.getElementById('oferta');
+      if(target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
   document.querySelectorAll('a[href*="kiwify.com.br"], a[href*="kiwify.app"]').forEach(link => {
     try {
       const dest = new URL(link.href, window.location.href);
